@@ -7,6 +7,7 @@
 //
 
 #import "HomePageVC.h"
+#import "ColdHotSignalVC.h"
 #import "PlaygroundVC.h"
 
 static const CGFloat kTableViewCellHeight = 60.0f;
@@ -72,9 +73,9 @@ static const CGFloat kTableViewCellHeight = 60.0f;
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    HomePageCellModel *model1 = [HomePageCellModel modelWithTitle:@"测试内容主题"
-                                                         subTitle:@"测试内容描述"
-                                                          vcClass:[PlaygroundVC class]
+    HomePageCellModel *model1 = [HomePageCellModel modelWithTitle:@"冷/热信号"
+                                                         subTitle:@"基本的类图结构"
+                                                          vcClass:[ColdHotSignalVC class]
                                                      navigationVC:self.navigationController];
     
     self.dataSourceArray = [NSArray arrayWithObjects:model1, nil];
@@ -83,7 +84,7 @@ static const CGFloat kTableViewCellHeight = 60.0f;
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    self.title = @"首页";
+    self.title = @"RAC总结归纳";
     [self.navigationController setNavigationBarHidden:NO animated:animated];
 }
 
@@ -130,5 +131,6 @@ static const CGFloat kTableViewCellHeight = 60.0f;
     }
 }
 
-
 @end
+
+

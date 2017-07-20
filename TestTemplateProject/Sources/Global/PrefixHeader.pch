@@ -32,5 +32,7 @@
 #import "BNTabBarController.h"
 #import "BNPopoverWindow.h"
 #import "BasePopoverVC.h"
+#import "RACSignal+Extension.h"
+#import "RACCommand+Extension.h"
 
 #endif /* PrefixHeader_pch */
