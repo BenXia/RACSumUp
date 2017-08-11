@@ -12,8 +12,11 @@
 
 - (RACCommand *)com_combine {
     if (!_com_combine) {
+//        _com_combine = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+//            return [[self sig_simpleOne] merge:[self sig_simpleTwo]];
+//        }];
         _com_combine = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
-            return [[self sig_simpleOne] merge:[self sig_simpleTwo]];
+            return [RACSignal combineLatest:@[[self sig_simpleOne], [self sig_simpleTwo]]];
         }];
     }
     
@@ -36,6 +39,8 @@
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [subscriber sendNext:@"OK"];
             [subscriber sendCompleted];
+            
+//            [subscriber sendError:nil];
         });
         
         return nil;
