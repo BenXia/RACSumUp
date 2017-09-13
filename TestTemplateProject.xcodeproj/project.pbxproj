@@ -36,6 +36,7 @@
 		B5647FA91EF90EC1009CF536 /* GCDSemaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = B5647FA61EF90EC1009CF536 /* GCDSemaphore.m */; };
 		B5647FF41EF912EE009CF536 /* UIImage+Blur.m in Sources */ = {isa = PBXBuildFile; fileRef = B5647FF31EF912EE009CF536 /* UIImage+Blur.m */; };
 		B5647FF71EF91BC7009CF536 /* CommonUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B5647FF61EF91BC7009CF536 /* CommonUtils.m */; };
+		B57046261F693854006476E2 /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B57046251F693854006476E2 /* TestModel.m */; };
 		B595DD511F2098080091242B /* ColdHotSignalVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B595DD4F1F2098080091242B /* ColdHotSignalVC.m */; };
 		B595DD521F2098080091242B /* ColdHotSignalVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B595DD501F2098080091242B /* ColdHotSignalVC.xib */; };
 		B595DD551F2098310091242B /* ColdHotSignalVM.m in Sources */ = {isa = PBXBuildFile; fileRef = B595DD541F2098310091242B /* ColdHotSignalVM.m */; };
@@ -112,6 +113,8 @@
 		B5647FF31EF912EE009CF536 /* UIImage+Blur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Blur.m"; sourceTree = "<group>"; };
 		B5647FF51EF91BC7009CF536 /* CommonUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtils.h; sourceTree = "<group>"; };
 		B5647FF61EF91BC7009CF536 /* CommonUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtils.m; sourceTree = "<group>"; };
+		B57046241F693854006476E2 /* TestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
+		B57046251F693854006476E2 /* TestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
 		B595DD4E1F2098080091242B /* ColdHotSignalVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColdHotSignalVC.h; sourceTree = "<group>"; };
 		B595DD4F1F2098080091242B /* ColdHotSignalVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColdHotSignalVC.m; sourceTree = "<group>"; };
 		B595DD501F2098080091242B /* ColdHotSignalVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColdHotSignalVC.xib; sourceTree = "<group>"; };
@@ -300,6 +303,8 @@
 		B50394DA1EEE71FB0016FA97 /* Playground */ = {
 			isa = PBXGroup;
 			children = (
+				B57046241F693854006476E2 /* TestModel.h */,
+				B57046251F693854006476E2 /* TestModel.m */,
 				B50394DB1EEE71FB0016FA97 /* PlaygroundVC.h */,
 				B50394DC1EEE71FB0016FA97 /* PlaygroundVC.m */,
 				B50394DD1EEE71FB0016FA97 /* PlaygroundVC.xib */,
@@ -614,6 +619,7 @@
 				B5647FA71EF90EC1009CF536 /* GCDGroup.m in Sources */,
 				B50711521F0E4A4A008EC4AE /* BNPopoverWindowRootVC.m in Sources */,
 				B5647FA91EF90EC1009CF536 /* GCDSemaphore.m in Sources */,
+				B57046261F693854006476E2 /* TestModel.m in Sources */,
 				B595DD5C1F2099BE0091242B /* RACCommand+Extension.m in Sources */,
 				B5FA68AF1EF26F870077349C /* BNTabBarController.m in Sources */,
 				330F7C001ED333F00009280A /* main.m in Sources */,

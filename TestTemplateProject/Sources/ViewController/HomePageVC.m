@@ -78,7 +78,12 @@ static const CGFloat kTableViewCellHeight = 60.0f;
                                                           vcClass:[ColdHotSignalVC class]
                                                      navigationVC:self.navigationController];
     
-    self.dataSourceArray = [NSArray arrayWithObjects:model1, nil];
+    HomePageCellModel *model2 = [HomePageCellModel modelWithTitle:@"操场"
+                                                         subTitle:@"Do whatever you want here"
+                                                          vcClass:[PlaygroundVC class]
+                                                     navigationVC:self.navigationController];
+    
+    self.dataSourceArray = [NSArray arrayWithObjects:model1, model2, nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
