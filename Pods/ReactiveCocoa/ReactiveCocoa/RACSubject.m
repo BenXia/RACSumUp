@@ -46,6 +46,8 @@
 }
 
 - (void)dealloc {
+    NSLog (@"RACSubject \"%@\" dealloc", self.name);
+    
 	[self.disposable dispose];
 }
 

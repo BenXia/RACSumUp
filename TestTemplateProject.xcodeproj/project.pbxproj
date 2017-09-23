@@ -14,6 +14,17 @@
 		330F7C0D1ED349AB0009280A /* UIView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 330F7C0B1ED349AB0009280A /* UIView+Helper.m */; };
 		33144EF61EF05059006D27AC /* UIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 33144EEA1EF05059006D27AC /* UIUtils.m */; };
 		33144EF91EF05218006D27AC /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 33144EF81EF05218006D27AC /* NSString+Size.m */; };
+		33454B321F764DB900DC3F14 /* LifeCycleAndMemoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33454B301F764DB900DC3F14 /* LifeCycleAndMemoryVC.m */; };
+		33454B331F764DB900DC3F14 /* LifeCycleAndMemoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33454B311F764DB900DC3F14 /* LifeCycleAndMemoryVC.xib */; };
+		33454B381F764EB700DC3F14 /* UsageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33454B361F764EB700DC3F14 /* UsageVC.m */; };
+		33454B391F764EB700DC3F14 /* UsageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33454B371F764EB700DC3F14 /* UsageVC.xib */; };
+		33454B441F764EFD00DC3F14 /* TwoWayBindingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33454B421F764EFD00DC3F14 /* TwoWayBindingVC.m */; };
+		33454B451F764EFD00DC3F14 /* TwoWayBindingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33454B431F764EFD00DC3F14 /* TwoWayBindingVC.xib */; };
+		33454B4B1F76501000DC3F14 /* SingleOperationsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33454B491F76501000DC3F14 /* SingleOperationsVC.m */; };
+		33454B4C1F76501000DC3F14 /* SingleOperationsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33454B4A1F76501000DC3F14 /* SingleOperationsVC.xib */; };
+		33454B501F76501D00DC3F14 /* GroupOperationsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33454B4E1F76501D00DC3F14 /* GroupOperationsVC.m */; };
+		33454B511F76501D00DC3F14 /* GroupOperationsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33454B4F1F76501D00DC3F14 /* GroupOperationsVC.xib */; };
+		33454B571F76517400DC3F14 /* NSUserDefaults+CustomRACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 33454B561F76517400DC3F14 /* NSUserDefaults+CustomRACSupport.m */; };
 		337EEC291EDC3F2C00EDC166 /* NSObject+DLIntrospection.m in Sources */ = {isa = PBXBuildFile; fileRef = 337EEC281EDC3F2C00EDC166 /* NSObject+DLIntrospection.m */; };
 		B50394D81EEE71E00016FA97 /* HomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B50394D61EEE71E00016FA97 /* HomePageVC.m */; };
 		B50394D91EEE71E00016FA97 /* HomePageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B50394D71EEE71E00016FA97 /* HomePageVC.xib */; };
@@ -66,6 +77,23 @@
 		33144EEB1EF05059006D27AC /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		33144EF71EF05218006D27AC /* NSString+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
 		33144EF81EF05218006D27AC /* NSString+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
+		33454B2F1F764DB900DC3F14 /* LifeCycleAndMemoryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LifeCycleAndMemoryVC.h; sourceTree = "<group>"; };
+		33454B301F764DB900DC3F14 /* LifeCycleAndMemoryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LifeCycleAndMemoryVC.m; sourceTree = "<group>"; };
+		33454B311F764DB900DC3F14 /* LifeCycleAndMemoryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LifeCycleAndMemoryVC.xib; sourceTree = "<group>"; };
+		33454B351F764EB700DC3F14 /* UsageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsageVC.h; sourceTree = "<group>"; };
+		33454B361F764EB700DC3F14 /* UsageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsageVC.m; sourceTree = "<group>"; };
+		33454B371F764EB700DC3F14 /* UsageVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UsageVC.xib; sourceTree = "<group>"; };
+		33454B411F764EFD00DC3F14 /* TwoWayBindingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoWayBindingVC.h; sourceTree = "<group>"; };
+		33454B421F764EFD00DC3F14 /* TwoWayBindingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoWayBindingVC.m; sourceTree = "<group>"; };
+		33454B431F764EFD00DC3F14 /* TwoWayBindingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwoWayBindingVC.xib; sourceTree = "<group>"; };
+		33454B481F76501000DC3F14 /* SingleOperationsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleOperationsVC.h; sourceTree = "<group>"; };
+		33454B491F76501000DC3F14 /* SingleOperationsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleOperationsVC.m; sourceTree = "<group>"; };
+		33454B4A1F76501000DC3F14 /* SingleOperationsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SingleOperationsVC.xib; sourceTree = "<group>"; };
+		33454B4D1F76501D00DC3F14 /* GroupOperationsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupOperationsVC.h; sourceTree = "<group>"; };
+		33454B4E1F76501D00DC3F14 /* GroupOperationsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupOperationsVC.m; sourceTree = "<group>"; };
+		33454B4F1F76501D00DC3F14 /* GroupOperationsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupOperationsVC.xib; sourceTree = "<group>"; };
+		33454B551F76517400DC3F14 /* NSUserDefaults+CustomRACSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+CustomRACSupport.h"; sourceTree = "<group>"; };
+		33454B561F76517400DC3F14 /* NSUserDefaults+CustomRACSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+CustomRACSupport.m"; sourceTree = "<group>"; };
 		337EEC271EDC3F2C00EDC166 /* NSObject+DLIntrospection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DLIntrospection.h"; sourceTree = "<group>"; };
 		337EEC281EDC3F2C00EDC166 /* NSObject+DLIntrospection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DLIntrospection.m"; sourceTree = "<group>"; };
 		5C6D28EEC1B5E3424CF2308B /* Pods-TestTemplateProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTemplateProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestTemplateProject/Pods-TestTemplateProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -256,6 +284,11 @@
 				B50394D61EEE71E00016FA97 /* HomePageVC.m */,
 				B50394D71EEE71E00016FA97 /* HomePageVC.xib */,
 				B595DD4D1F2097EC0091242B /* ColdHotSignal */,
+				33454B2E1F764D9D00DC3F14 /* LifeCycleAndMemory */,
+				33454B341F764EA600DC3F14 /* Usage */,
+				33454B461F764FA300DC3F14 /* SingleOperaions */,
+				33454B471F764FAB00DC3F14 /* GroupOperations */,
+				33454B401F764EE700DC3F14 /* TwoWayBinding */,
 				B50394DA1EEE71FB0016FA97 /* Playground */,
 			);
 			path = ViewController;
@@ -280,6 +313,56 @@
 				B5647FF61EF91BC7009CF536 /* CommonUtils.m */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		33454B2E1F764D9D00DC3F14 /* LifeCycleAndMemory */ = {
+			isa = PBXGroup;
+			children = (
+				33454B2F1F764DB900DC3F14 /* LifeCycleAndMemoryVC.h */,
+				33454B301F764DB900DC3F14 /* LifeCycleAndMemoryVC.m */,
+				33454B311F764DB900DC3F14 /* LifeCycleAndMemoryVC.xib */,
+			);
+			path = LifeCycleAndMemory;
+			sourceTree = "<group>";
+		};
+		33454B341F764EA600DC3F14 /* Usage */ = {
+			isa = PBXGroup;
+			children = (
+				33454B351F764EB700DC3F14 /* UsageVC.h */,
+				33454B361F764EB700DC3F14 /* UsageVC.m */,
+				33454B371F764EB700DC3F14 /* UsageVC.xib */,
+			);
+			path = Usage;
+			sourceTree = "<group>";
+		};
+		33454B401F764EE700DC3F14 /* TwoWayBinding */ = {
+			isa = PBXGroup;
+			children = (
+				33454B411F764EFD00DC3F14 /* TwoWayBindingVC.h */,
+				33454B421F764EFD00DC3F14 /* TwoWayBindingVC.m */,
+				33454B431F764EFD00DC3F14 /* TwoWayBindingVC.xib */,
+			);
+			path = TwoWayBinding;
+			sourceTree = "<group>";
+		};
+		33454B461F764FA300DC3F14 /* SingleOperaions */ = {
+			isa = PBXGroup;
+			children = (
+				33454B481F76501000DC3F14 /* SingleOperationsVC.h */,
+				33454B491F76501000DC3F14 /* SingleOperationsVC.m */,
+				33454B4A1F76501000DC3F14 /* SingleOperationsVC.xib */,
+			);
+			path = SingleOperaions;
+			sourceTree = "<group>";
+		};
+		33454B471F764FAB00DC3F14 /* GroupOperations */ = {
+			isa = PBXGroup;
+			children = (
+				33454B4D1F76501D00DC3F14 /* GroupOperationsVC.h */,
+				33454B4E1F76501D00DC3F14 /* GroupOperationsVC.m */,
+				33454B4F1F76501D00DC3F14 /* GroupOperationsVC.xib */,
+			);
+			path = GroupOperations;
 			sourceTree = "<group>";
 		};
 		337EEC261EDC3F2C00EDC166 /* DLIntrospection */ = {
@@ -416,6 +499,8 @@
 		B595DD571F2099BE0091242B /* RACPatch */ = {
 			isa = PBXGroup;
 			children = (
+				33454B551F76517400DC3F14 /* NSUserDefaults+CustomRACSupport.h */,
+				33454B561F76517400DC3F14 /* NSUserDefaults+CustomRACSupport.m */,
 				B595DD5A1F2099BE0091242B /* RACSignal+Extension.h */,
 				B595DD5B1F2099BE0091242B /* RACSignal+Extension.m */,
 				B595DD581F2099BE0091242B /* RACCommand+Extension.h */,
@@ -534,9 +619,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B595DD521F2098080091242B /* ColdHotSignalVC.xib in Resources */,
+				33454B511F76501D00DC3F14 /* GroupOperationsVC.xib in Resources */,
 				B50394D91EEE71E00016FA97 /* HomePageVC.xib in Resources */,
+				33454B391F764EB700DC3F14 /* UsageVC.xib in Resources */,
+				33454B451F764EFD00DC3F14 /* TwoWayBindingVC.xib in Resources */,
 				B50394DF1EEE71FB0016FA97 /* PlaygroundVC.xib in Resources */,
 				330F7C021ED334380009280A /* Assets.xcassets in Resources */,
+				33454B4C1F76501000DC3F14 /* SingleOperationsVC.xib in Resources */,
+				33454B331F764DB900DC3F14 /* LifeCycleAndMemoryVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,27 +685,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33454B501F76501D00DC3F14 /* GroupOperationsVC.m in Sources */,
 				B507115D1F0E4AB3008EC4AE /* BNPopoverBottomLayout.m in Sources */,
 				B5647FF41EF912EE009CF536 /* UIImage+Blur.m in Sources */,
 				33144EF91EF05218006D27AC /* NSString+Size.m in Sources */,
 				33144EF61EF05059006D27AC /* UIUtils.m in Sources */,
+				33454B441F764EFD00DC3F14 /* TwoWayBindingVC.m in Sources */,
 				B595DD551F2098310091242B /* ColdHotSignalVM.m in Sources */,
 				B5FA68AD1EF26F870077349C /* BaseViewController.m in Sources */,
 				B507115C1F0E4AB3008EC4AE /* BNPopoverBaseLayout.m in Sources */,
 				B5FA68AE1EF26F870077349C /* BNNavigationController.m in Sources */,
 				B5647FA81EF90EC1009CF536 /* GCDQueue.m in Sources */,
 				B50394D81EEE71E00016FA97 /* HomePageVC.m in Sources */,
+				33454B321F764DB900DC3F14 /* LifeCycleAndMemoryVC.m in Sources */,
 				B50711511F0E4A4A008EC4AE /* BNPopoverWindow.m in Sources */,
 				B50394DE1EEE71FB0016FA97 /* PlaygroundVC.m in Sources */,
 				B595DD5D1F2099BE0091242B /* RACSignal+Extension.m in Sources */,
 				330F7BF61ED333F00009280A /* AppDelegate.m in Sources */,
 				B507115F1F0E4AB3008EC4AE /* BNPopoverCenterLayout.m in Sources */,
+				33454B4B1F76501000DC3F14 /* SingleOperationsVC.m in Sources */,
 				B5647F9A1EF90B1F009CF536 /* MBProgressHUD.m in Sources */,
 				B5647F991EF90B1F009CF536 /* MBProgressHUD+Add.m in Sources */,
+				33454B571F76517400DC3F14 /* NSUserDefaults+CustomRACSupport.m in Sources */,
 				B5647F8B1EF8FB4C009CF536 /* BNPopupWindow.m in Sources */,
 				B5647F9D1EF90E7C009CF536 /* UIView+Hierarchy.m in Sources */,
 				B595DD511F2098080091242B /* ColdHotSignalVC.m in Sources */,
 				330F7C0D1ED349AB0009280A /* UIView+Helper.m in Sources */,
+				33454B381F764EB700DC3F14 /* UsageVC.m in Sources */,
 				B5647FA71EF90EC1009CF536 /* GCDGroup.m in Sources */,
 				B50711521F0E4A4A008EC4AE /* BNPopoverWindowRootVC.m in Sources */,
 				B5647FA91EF90EC1009CF536 /* GCDSemaphore.m in Sources */,

@@ -8,6 +8,11 @@
 
 #import "HomePageVC.h"
 #import "ColdHotSignalVC.h"
+#import "UsageVC.h"
+#import "SingleOperationsVC.h"
+#import "GroupOperationsVC.h"
+#import "TwoWayBindingVC.h"
+#import "LifeCycleAndMemoryVC.h"
 #import "PlaygroundVC.h"
 
 static const CGFloat kTableViewCellHeight = 60.0f;
@@ -78,12 +83,37 @@ static const CGFloat kTableViewCellHeight = 60.0f;
                                                           vcClass:[ColdHotSignalVC class]
                                                      navigationVC:self.navigationController];
     
-    HomePageCellModel *model2 = [HomePageCellModel modelWithTitle:@"操场"
+    HomePageCellModel *model2 = [HomePageCellModel modelWithTitle:@"基本使用"
+                                                         subTitle:@"一些常见的使用语法"
+                                                          vcClass:[UsageVC class]
+                                                     navigationVC:self.navigationController];
+    
+    HomePageCellModel *model3 = [HomePageCellModel modelWithTitle:@"生命周期与内存管理"
+                                                         subTitle:@"冷/热信号订阅和取消订阅"
+                                                          vcClass:[LifeCycleAndMemoryVC class]
+                                                     navigationVC:self.navigationController];
+    
+    HomePageCellModel *model4 = [HomePageCellModel modelWithTitle:@"单个信号基本操作"
+                                                         subTitle:@"一些常见的单信号基本操作"
+                                                          vcClass:[SingleOperationsVC class]
+                                                     navigationVC:self.navigationController];
+    
+    HomePageCellModel *model5 = [HomePageCellModel modelWithTitle:@"多个信号组合操作"
+                                                         subTitle:@"一些常见的多信号组合操作"
+                                                          vcClass:[GroupOperationsVC class]
+                                                     navigationVC:self.navigationController];
+    
+    HomePageCellModel *model6 = [HomePageCellModel modelWithTitle:@"双向绑定"
+                                                         subTitle:@"一些常见的双向绑定案例"
+                                                          vcClass:[TwoWayBindingVC class]
+                                                     navigationVC:self.navigationController];
+
+    HomePageCellModel *model7 = [HomePageCellModel modelWithTitle:@"操场"
                                                          subTitle:@"Do whatever you want here"
                                                           vcClass:[PlaygroundVC class]
                                                      navigationVC:self.navigationController];
     
-    self.dataSourceArray = [NSArray arrayWithObjects:model1, model2, nil];
+    self.dataSourceArray = [NSArray arrayWithObjects:model1, model2, model3, model4, model5, model6, model7, nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
