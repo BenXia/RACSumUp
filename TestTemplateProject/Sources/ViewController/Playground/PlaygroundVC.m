@@ -21,7 +21,7 @@ static NSString *const kPostSuccess = @"kPostSuccess";
     [super viewDidLoad];
     
     [TestModel sharedInstance].name = @"GuoDuo is fine";
-    [[RACObserve([TestModel sharedInstance], name) onMainThread] subscribeNext:^(id x) {        // 不需要加上 takeUntil:self.rac_willDeallocSignal，否则订阅关系还在
+    [[RACObserve([TestModel sharedInstance], name) onMainThread] subscribeNext:^(id x) {        // 不需要加上 takeUntil:self.rac_willDeallocSignal
         NSLog (@"[TestModel sharedInstance].name : %@", [TestModel sharedInstance].name);
     }];
     
