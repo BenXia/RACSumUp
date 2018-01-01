@@ -8,7 +8,7 @@
 
 #import "TwoWayBindingVC.h"
 #import "NSUserDefaults+CustomRACSupport.h"
-#import "ReactiveCocoa.h"
+#import "ReactiveObjC.h"
 
 static NSString *kShowABTestEntranceUDKey = @"kShowABTestEntranceUDKey";
 

@@ -86,9 +86,11 @@
     RACDisposable *disposable1 = [hotSignal subscribeNext:^(id x) {
         NSLog (@"1subscribeNext: %@", x);
     }];
+    (void)disposable1;
     RACDisposable *disposable2 = [hotSignal subscribeNext:^(id x) {
         NSLog (@"2subscribeNext: %@", x);
     }];
+    (void)disposable2;
     
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //        [disposable1 dispose];

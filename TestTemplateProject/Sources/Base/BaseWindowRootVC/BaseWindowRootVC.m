@@ -10,7 +10,7 @@
 
 @implementation BaseWindowRootVC
 
-+ (BaseWindowRootVC *)createRootViewControllerWithStatusBarStyle:(UIStatusBarStyle)statusBarStyle {
++ (instancetype)createRootViewControllerWithStatusBarStyle:(UIStatusBarStyle)statusBarStyle {
     BaseWindowRootVC *rootVC = [[BaseWindowRootVC alloc] init];
     rootVC.statusBarStyleToSet = statusBarStyle;
     return rootVC;

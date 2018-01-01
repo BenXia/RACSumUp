@@ -7,7 +7,7 @@
 //
 
 #import "RACSignal+Extension.h"
-#import "ReactiveCocoa.h"
+#import "ReactiveObjC.h"
 
 @implementation RACSignal (Extension)
 

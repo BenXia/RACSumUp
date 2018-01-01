@@ -12,6 +12,6 @@
 
 @property (nonatomic, assign) UIStatusBarStyle statusBarStyleToSet;
 
-+ (BaseWindowRootVC *)createRootViewControllerWithStatusBarStyle:(UIStatusBarStyle)statusBarStyle;
++ (instancetype)createRootViewControllerWithStatusBarStyle:(UIStatusBarStyle)statusBarStyle;
 
 @end
