@@ -53,7 +53,7 @@ static NSString *kShowABTestEntranceUDKey = @"kShowABTestEntranceUDKey";
     self.userNameTextField.delegate = self;
     self.profileTextView.delegate = self;   // 注意: UITextView的rac_textSignal被订阅会导致其delegate委托方法不触发
     
-    self.scrollContentViewHeightConstraint.constant = 300;
+    self.scrollContentViewHeightConstraint.constant = 1200;
     
     // 1.普通情况下实现两个属性的双向绑定
     [self simpleTwoWayBinding];

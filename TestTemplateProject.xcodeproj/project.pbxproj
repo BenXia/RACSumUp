@@ -13,6 +13,8 @@
 		330F7C0D1ED349AB0009280A /* UIView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 330F7C0B1ED349AB0009280A /* UIView+Helper.m */; };
 		33144EF61EF05059006D27AC /* UIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 33144EEA1EF05059006D27AC /* UIUtils.m */; };
 		33144EF91EF05218006D27AC /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 33144EF81EF05218006D27AC /* NSString+Size.m */; };
+		3319AE9D22EDB24A001722B6 /* TwoWayBinding.png in Resources */ = {isa = PBXBuildFile; fileRef = 3319AE9B22EDB249001722B6 /* TwoWayBinding.png */; };
+		3319AE9E22EDB24A001722B6 /* RACChannelTo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3319AE9C22EDB24A001722B6 /* RACChannelTo.jpeg */; };
 		331B4D3122ED82C600BE1A47 /* RACMLKVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 331B4D2F22ED82C600BE1A47 /* RACMLKVC.m */; };
 		331B4D3222ED82C600BE1A47 /* RACMLKVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 331B4D3022ED82C600BE1A47 /* RACMLKVC.xib */; };
 		33454B321F764DB900DC3F14 /* LifeCycleAndMemoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33454B301F764DB900DC3F14 /* LifeCycleAndMemoryVC.m */; };
@@ -79,6 +81,8 @@
 		33144EEB1EF05059006D27AC /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		33144EF71EF05218006D27AC /* NSString+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
 		33144EF81EF05218006D27AC /* NSString+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
+		3319AE9B22EDB249001722B6 /* TwoWayBinding.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwoWayBinding.png; sourceTree = "<group>"; };
+		3319AE9C22EDB24A001722B6 /* RACChannelTo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RACChannelTo.jpeg; sourceTree = "<group>"; };
 		331B4D2E22ED82C600BE1A47 /* RACMLKVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACMLKVC.h; sourceTree = "<group>"; };
 		331B4D2F22ED82C600BE1A47 /* RACMLKVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACMLKVC.m; sourceTree = "<group>"; };
 		331B4D3022ED82C600BE1A47 /* RACMLKVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RACMLKVC.xib; sourceTree = "<group>"; };
@@ -357,6 +361,8 @@
 				33454B411F764EFD00DC3F14 /* TwoWayBindingVC.h */,
 				33454B421F764EFD00DC3F14 /* TwoWayBindingVC.m */,
 				33454B431F764EFD00DC3F14 /* TwoWayBindingVC.xib */,
+				3319AE9C22EDB24A001722B6 /* RACChannelTo.jpeg */,
+				3319AE9B22EDB249001722B6 /* TwoWayBinding.png */,
 			);
 			path = TwoWayBinding;
 			sourceTree = "<group>";
@@ -644,7 +650,9 @@
 				330F7C021ED334380009280A /* Assets.xcassets in Resources */,
 				33454B4C1F76501000DC3F14 /* SingleOperationsVC.xib in Resources */,
 				33454B331F764DB900DC3F14 /* LifeCycleAndMemoryVC.xib in Resources */,
+				3319AE9D22EDB24A001722B6 /* TwoWayBinding.png in Resources */,
 				331B4D3222ED82C600BE1A47 /* RACMLKVC.xib in Resources */,
+				3319AE9E22EDB24A001722B6 /* RACChannelTo.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

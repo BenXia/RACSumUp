@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -27,7 +27,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bhl-Io-Rik" userLabel="ScrollContentView">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="klj-HB-4Dz" userLabel="UISwitch双向绑定">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
@@ -39,7 +39,7 @@
                                             </connections>
                                         </switch>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rpF-DR-4gz">
-                                            <rect key="frame" x="55.5" y="61" width="263" height="30"/>
+                                            <rect key="frame" x="56" y="61" width="263" height="30"/>
                                             <state key="normal" title="触发代码修改NSUserDefaults的绑定值"/>
                                             <connections>
                                                 <action selector="didClickChangeUserDefaultValueWithCodeButton:" destination="-1" eventType="touchUpInside" id="535-Cs-lff"/>
@@ -65,7 +65,7 @@
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cpw-RA-osA">
-                                            <rect key="frame" x="82" y="60" width="211" height="30"/>
+                                            <rect key="frame" x="82.5" y="60" width="210" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="5Vp-Gd-ZMp"/>
                                             </constraints>
@@ -98,7 +98,7 @@
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHk-Sp-GP4">
-                                            <rect key="frame" x="82" y="60" width="211" height="30"/>
+                                            <rect key="frame" x="82.5" y="60" width="210" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="BFB-mj-Rbo"/>
                                             </constraints>
@@ -118,19 +118,37 @@
                                         <constraint firstItem="SuN-rK-DFs" firstAttribute="leading" secondItem="6Is-VI-s2g" secondAttribute="leading" constant="12" id="xIg-UK-NKj"/>
                                     </constraints>
                                 </view>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RACChannelTo.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="VZY-bW-ueR">
+                                    <rect key="frame" x="0.0" y="300" width="375" height="205.5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="VZY-bW-ueR" secondAttribute="height" multiplier="1364:748" id="j9n-e1-GGQ"/>
+                                    </constraints>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TwoWayBinding.png" translatesAutoresizingMaskIntoConstraints="NO" id="6Ho-oB-YzK">
+                                    <rect key="frame" x="0.0" y="505.5" width="375" height="100"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="6Ho-oB-YzK" secondAttribute="height" multiplier="2832:755" id="5A0-A4-fbv"/>
+                                    </constraints>
+                                </imageView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
+                                <constraint firstItem="6Ho-oB-YzK" firstAttribute="top" secondItem="VZY-bW-ueR" secondAttribute="bottom" id="BZx-lw-46C"/>
                                 <constraint firstItem="6Is-VI-s2g" firstAttribute="top" secondItem="tKO-3J-flX" secondAttribute="bottom" id="D5m-f7-6tN"/>
                                 <constraint firstAttribute="trailing" secondItem="6Is-VI-s2g" secondAttribute="trailing" id="GN8-Dz-ApE"/>
+                                <constraint firstItem="6Ho-oB-YzK" firstAttribute="leading" secondItem="Bhl-Io-Rik" secondAttribute="leading" id="Gk6-ke-T1I"/>
                                 <constraint firstAttribute="trailing" secondItem="tKO-3J-flX" secondAttribute="trailing" id="II9-gj-uIM"/>
                                 <constraint firstItem="6Is-VI-s2g" firstAttribute="leading" secondItem="Bhl-Io-Rik" secondAttribute="leading" id="Jsj-VJ-bmN"/>
                                 <constraint firstItem="klj-HB-4Dz" firstAttribute="top" secondItem="Bhl-Io-Rik" secondAttribute="top" id="Ocm-yO-efN"/>
                                 <constraint firstItem="tKO-3J-flX" firstAttribute="top" secondItem="klj-HB-4Dz" secondAttribute="bottom" id="Yl7-cN-FU4"/>
-                                <constraint firstAttribute="height" constant="667" id="cXz-cT-7jM"/>
+                                <constraint firstAttribute="trailing" secondItem="VZY-bW-ueR" secondAttribute="trailing" id="bB3-q6-d9y"/>
+                                <constraint firstItem="VZY-bW-ueR" firstAttribute="top" secondItem="6Is-VI-s2g" secondAttribute="bottom" id="blg-p5-chi"/>
+                                <constraint firstAttribute="height" constant="1200" id="cXz-cT-7jM"/>
                                 <constraint firstItem="klj-HB-4Dz" firstAttribute="leading" secondItem="Bhl-Io-Rik" secondAttribute="leading" id="eUX-5k-Ybp"/>
                                 <constraint firstItem="tKO-3J-flX" firstAttribute="leading" secondItem="Bhl-Io-Rik" secondAttribute="leading" id="hcV-Nl-iIp"/>
                                 <constraint firstAttribute="trailing" secondItem="klj-HB-4Dz" secondAttribute="trailing" id="i85-Er-F6m"/>
+                                <constraint firstItem="VZY-bW-ueR" firstAttribute="leading" secondItem="Bhl-Io-Rik" secondAttribute="leading" id="ng8-1b-dSp"/>
+                                <constraint firstAttribute="trailing" secondItem="6Ho-oB-YzK" secondAttribute="trailing" id="udl-du-dR0"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -150,12 +168,11 @@
                 <constraint firstItem="gAN-Fx-9Wu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="hv1-o1-ejW"/>
                 <constraint firstItem="gAN-Fx-9Wu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iTQ-HY-2qh"/>
             </constraints>
-            <point key="canvasLocation" x="46.5" y="54.5"/>
+            <point key="canvasLocation" x="67.391304347826093" y="36.495535714285715"/>
         </view>
     </objects>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
-    </simulatedMetricsContainer>
+    <resources>
+        <image name="RACChannelTo.jpeg" width="690.43865966796875" height="378.62765502929688"/>
+        <image name="TwoWayBinding.png" width="1435.943603515625" height="382.81689453125"/>
+    </resources>
 </document>
