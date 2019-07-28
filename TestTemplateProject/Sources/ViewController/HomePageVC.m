@@ -79,19 +79,19 @@ static const CGFloat kTableViewCellHeight = 60.0f;
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    HomePageCellModel *model1 = [HomePageCellModel modelWithTitle:@"冷/热信号"
-                                                         subTitle:@"基本的类图结构"
-                                                          vcClass:[ColdHotSignalVC class]
-                                                     navigationVC:self.navigationController];
-    
-    HomePageCellModel *model2 = [HomePageCellModel modelWithTitle:@"基本使用"
+    HomePageCellModel *model1 = [HomePageCellModel modelWithTitle:@"基本使用"
                                                          subTitle:@"一些常见的使用语法"
                                                           vcClass:[UsageVC class]
                                                      navigationVC:self.navigationController];
     
-    HomePageCellModel *model3 = [HomePageCellModel modelWithTitle:@"生命周期与内存管理"
+    HomePageCellModel *model2 = [HomePageCellModel modelWithTitle:@"生命周期与内存管理"
                                                          subTitle:@"冷/热信号订阅和取消订阅"
                                                           vcClass:[LifeCycleAndMemoryVC class]
+                                                     navigationVC:self.navigationController];
+    
+    HomePageCellModel *model3 = [HomePageCellModel modelWithTitle:@"冷/热信号"
+                                                         subTitle:@"基本的类图结构"
+                                                          vcClass:[ColdHotSignalVC class]
                                                      navigationVC:self.navigationController];
     
     HomePageCellModel *model4 = [HomePageCellModel modelWithTitle:@"单个信号基本操作"
