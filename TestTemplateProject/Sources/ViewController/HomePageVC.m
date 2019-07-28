@@ -14,6 +14,7 @@
 #import "TwoWayBindingVC.h"
 #import "LifeCycleAndMemoryVC.h"
 #import "PlaygroundVC.h"
+#import "RACMLKVC.h"
 
 static const CGFloat kTableViewCellHeight = 60.0f;
 
@@ -107,13 +108,18 @@ static const CGFloat kTableViewCellHeight = 60.0f;
                                                          subTitle:@"一些常见的双向绑定案例"
                                                           vcClass:[TwoWayBindingVC class]
                                                      navigationVC:self.navigationController];
+    
+    HomePageCellModel *model7 = [HomePageCellModel modelWithTitle:@"内存泄漏"
+                                                         subTitle:@"一些经典的内存泄漏案例"
+                                                          vcClass:[RACMLKVC class]
+                                                     navigationVC:self.navigationController];
 
-    HomePageCellModel *model7 = [HomePageCellModel modelWithTitle:@"操场"
+    HomePageCellModel *model8 = [HomePageCellModel modelWithTitle:@"操场"
                                                          subTitle:@"Do whatever you want here"
                                                           vcClass:[PlaygroundVC class]
                                                      navigationVC:self.navigationController];
     
-    self.dataSourceArray = [NSArray arrayWithObjects:model1, model2, model3, model4, model5, model6, model7, nil];
+    self.dataSourceArray = [NSArray arrayWithObjects:model1, model2, model3, model4, model5, model6, model7, model8, nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

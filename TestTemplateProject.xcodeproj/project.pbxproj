@@ -13,6 +13,8 @@
 		330F7C0D1ED349AB0009280A /* UIView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 330F7C0B1ED349AB0009280A /* UIView+Helper.m */; };
 		33144EF61EF05059006D27AC /* UIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 33144EEA1EF05059006D27AC /* UIUtils.m */; };
 		33144EF91EF05218006D27AC /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 33144EF81EF05218006D27AC /* NSString+Size.m */; };
+		331B4D3122ED82C600BE1A47 /* RACMLKVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 331B4D2F22ED82C600BE1A47 /* RACMLKVC.m */; };
+		331B4D3222ED82C600BE1A47 /* RACMLKVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 331B4D3022ED82C600BE1A47 /* RACMLKVC.xib */; };
 		33454B321F764DB900DC3F14 /* LifeCycleAndMemoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33454B301F764DB900DC3F14 /* LifeCycleAndMemoryVC.m */; };
 		33454B331F764DB900DC3F14 /* LifeCycleAndMemoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33454B311F764DB900DC3F14 /* LifeCycleAndMemoryVC.xib */; };
 		33454B381F764EB700DC3F14 /* UsageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33454B361F764EB700DC3F14 /* UsageVC.m */; };
@@ -77,6 +79,9 @@
 		33144EEB1EF05059006D27AC /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		33144EF71EF05218006D27AC /* NSString+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
 		33144EF81EF05218006D27AC /* NSString+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
+		331B4D2E22ED82C600BE1A47 /* RACMLKVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACMLKVC.h; sourceTree = "<group>"; };
+		331B4D2F22ED82C600BE1A47 /* RACMLKVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACMLKVC.m; sourceTree = "<group>"; };
+		331B4D3022ED82C600BE1A47 /* RACMLKVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RACMLKVC.xib; sourceTree = "<group>"; };
 		33454B2F1F764DB900DC3F14 /* LifeCycleAndMemoryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LifeCycleAndMemoryVC.h; sourceTree = "<group>"; };
 		33454B301F764DB900DC3F14 /* LifeCycleAndMemoryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LifeCycleAndMemoryVC.m; sourceTree = "<group>"; };
 		33454B311F764DB900DC3F14 /* LifeCycleAndMemoryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LifeCycleAndMemoryVC.xib; sourceTree = "<group>"; };
@@ -285,6 +290,7 @@
 				B50394D71EEE71E00016FA97 /* HomePageVC.xib */,
 				B595DD4D1F2097EC0091242B /* ColdHotSignal */,
 				33454B2E1F764D9D00DC3F14 /* LifeCycleAndMemory */,
+				331B4D2222ED7F2B00BE1A47 /* MemoryLeak */,
 				33454B341F764EA600DC3F14 /* Usage */,
 				33454B461F764FA300DC3F14 /* SingleOperaions */,
 				33454B471F764FAB00DC3F14 /* GroupOperations */,
@@ -313,6 +319,16 @@
 				B5647FF61EF91BC7009CF536 /* CommonUtils.m */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		331B4D2222ED7F2B00BE1A47 /* MemoryLeak */ = {
+			isa = PBXGroup;
+			children = (
+				331B4D2E22ED82C600BE1A47 /* RACMLKVC.h */,
+				331B4D2F22ED82C600BE1A47 /* RACMLKVC.m */,
+				331B4D3022ED82C600BE1A47 /* RACMLKVC.xib */,
+			);
+			path = MemoryLeak;
 			sourceTree = "<group>";
 		};
 		33454B2E1F764D9D00DC3F14 /* LifeCycleAndMemory */ = {
@@ -600,6 +616,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -627,6 +644,7 @@
 				330F7C021ED334380009280A /* Assets.xcassets in Resources */,
 				33454B4C1F76501000DC3F14 /* SingleOperationsVC.xib in Resources */,
 				33454B331F764DB900DC3F14 /* LifeCycleAndMemoryVC.xib in Resources */,
+				331B4D3222ED82C600BE1A47 /* RACMLKVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -715,6 +733,7 @@
 				B5647FA71EF90EC1009CF536 /* GCDGroup.m in Sources */,
 				B50711521F0E4A4A008EC4AE /* BNPopoverWindowRootVC.m in Sources */,
 				B5647FA91EF90EC1009CF536 /* GCDSemaphore.m in Sources */,
+				331B4D3122ED82C600BE1A47 /* RACMLKVC.m in Sources */,
 				B57046261F693854006476E2 /* TestModel.m in Sources */,
 				B595DD5C1F2099BE0091242B /* RACCommand+Extension.m in Sources */,
 				B5FA68AF1EF26F870077349C /* BNTabBarController.m in Sources */,
