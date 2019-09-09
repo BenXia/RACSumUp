@@ -29,6 +29,7 @@
 		33454B511F76501D00DC3F14 /* GroupOperationsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33454B4F1F76501D00DC3F14 /* GroupOperationsVC.xib */; };
 		33454B571F76517400DC3F14 /* NSUserDefaults+CustomRACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 33454B561F76517400DC3F14 /* NSUserDefaults+CustomRACSupport.m */; };
 		337EEC291EDC3F2C00EDC166 /* NSObject+DLIntrospection.m in Sources */ = {isa = PBXBuildFile; fileRef = 337EEC281EDC3F2C00EDC166 /* NSObject+DLIntrospection.m */; };
+		6ABC08104B7ECC2017FFB126 /* Pods_TestTemplateProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6111390E963A1B8E71ADAAC5 /* Pods_TestTemplateProject.framework */; };
 		B50394D81EEE71E00016FA97 /* HomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B50394D61EEE71E00016FA97 /* HomePageVC.m */; };
 		B50394D91EEE71E00016FA97 /* HomePageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B50394D71EEE71E00016FA97 /* HomePageVC.xib */; };
 		B50394DE1EEE71FB0016FA97 /* PlaygroundVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B50394DC1EEE71FB0016FA97 /* PlaygroundVC.m */; };
@@ -59,11 +60,9 @@
 		B5FA68AD1EF26F870077349C /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FA68A61EF26F870077349C /* BaseViewController.m */; };
 		B5FA68AE1EF26F870077349C /* BNNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FA68A91EF26F870077349C /* BNNavigationController.m */; };
 		B5FA68AF1EF26F870077349C /* BNTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FA68AC1EF26F870077349C /* BNTabBarController.m */; };
-		E42A51E7738BB11E71CDA98D /* libPods-TestTemplateProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6364692DBB1E35BBAC518E /* libPods-TestTemplateProject.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0B6364692DBB1E35BBAC518E /* libPods-TestTemplateProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestTemplateProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		330F7BBD1ED3321F0009280A /* TestTemplateProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTemplateProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		330F7BD91ED333F00009280A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		330F7BDA1ED333F00009280A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -106,6 +105,7 @@
 		337EEC271EDC3F2C00EDC166 /* NSObject+DLIntrospection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DLIntrospection.h"; sourceTree = "<group>"; };
 		337EEC281EDC3F2C00EDC166 /* NSObject+DLIntrospection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DLIntrospection.m"; sourceTree = "<group>"; };
 		3EBF4711FA3970AC76C3C06F /* Pods-TestTemplateProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTemplateProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestTemplateProject/Pods-TestTemplateProject.release.xcconfig"; sourceTree = "<group>"; };
+		6111390E963A1B8E71ADAAC5 /* Pods_TestTemplateProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestTemplateProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B50394D51EEE71E00016FA97 /* HomePageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageVC.h; sourceTree = "<group>"; };
 		B50394D61EEE71E00016FA97 /* HomePageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageVC.m; sourceTree = "<group>"; };
 		B50394D71EEE71E00016FA97 /* HomePageVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomePageVC.xib; sourceTree = "<group>"; };
@@ -127,6 +127,7 @@
 		B50711591F0E4AB3008EC4AE /* BNPopoverCustomLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNPopoverCustomLayout.m; sourceTree = "<group>"; };
 		B507115A1F0E4AB3008EC4AE /* BNPopoverCenterLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNPopoverCenterLayout.h; sourceTree = "<group>"; };
 		B507115B1F0E4AB3008EC4AE /* BNPopoverCenterLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNPopoverCenterLayout.m; sourceTree = "<group>"; };
+		B53C6D2523262FB4001E8697 /* TestTemplateProject-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestTemplateProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		B5647F891EF8FB4C009CF536 /* BNPopupWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNPopupWindow.h; sourceTree = "<group>"; };
 		B5647F8A1EF8FB4C009CF536 /* BNPopupWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNPopupWindow.m; sourceTree = "<group>"; };
 		B5647F8D1EF9084E009CF536 /* BasePopoverVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasePopoverVC.h; sourceTree = "<group>"; };
@@ -174,7 +175,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E42A51E7738BB11E71CDA98D /* libPods-TestTemplateProject.a in Frameworks */,
+				6ABC08104B7ECC2017FFB126 /* Pods_TestTemplateProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +308,7 @@
 		330F7BF21ED333F00009280A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B53C6D2523262FB4001E8697 /* TestTemplateProject-Bridging-Header.h */,
 				330F7BF41ED333F00009280A /* Info.plist */,
 				330F7BF51ED333F00009280A /* main.m */,
 			);
@@ -574,7 +576,7 @@
 		BDE61C448897B6B2235B7026 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0B6364692DBB1E35BBAC518E /* libPods-TestTemplateProject.a */,
+				6111390E963A1B8E71ADAAC5 /* Pods_TestTemplateProject.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -591,7 +593,6 @@
 				330F7BBA1ED3321F0009280A /* Frameworks */,
 				330F7BBB1ED3321F0009280A /* Resources */,
 				294DDAF1896BE0701C735CFA /* [CP] Embed Pods Frameworks */,
-				5215E7CF8B8E7BAFFBF5FFF0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -613,6 +614,7 @@
 				TargetAttributes = {
 					330F7BBC1ED3321F0009280A = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 1030;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -665,28 +667,30 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestTemplateProject/Pods-TestTemplateProject-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjCBridge/ReactiveObjCBridge.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjCBridge.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestTemplateProject/Pods-TestTemplateProject-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5215E7CF8B8E7BAFFBF5FFF0 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestTemplateProject/Pods-TestTemplateProject-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestTemplateProject/Pods-TestTemplateProject-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		60FC5D81E55E1B15C1753C67 /* [CP] Check Pods Manifest.lock */ = {
@@ -695,13 +699,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestTemplateProject-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -865,7 +872,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = TestTemplateProject/Sources/Global/PrefixHeader.pch;
@@ -876,6 +885,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = iOSStudio.TestTemplateProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestTemplateProject/Supporting Files/TestTemplateProject-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -886,7 +898,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = TestTemplateProject/Sources/Global/PrefixHeader.pch;
@@ -897,6 +911,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = iOSStudio.TestTemplateProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestTemplateProject/Supporting Files/TestTemplateProject-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
