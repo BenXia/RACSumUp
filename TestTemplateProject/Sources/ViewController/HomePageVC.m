@@ -15,6 +15,7 @@
 #import "LifeCycleAndMemoryVC.h"
 #import "PlaygroundVC.h"
 #import "RACMLKVC.h"
+#import "TestTemplateProject-Swift.h"
 
 static const CGFloat kTableViewCellHeight = 60.0f;
 
@@ -79,47 +80,52 @@ static const CGFloat kTableViewCellHeight = 60.0f;
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    HomePageCellModel *model1 = [HomePageCellModel modelWithTitle:@"基本使用"
+    HomePageCellModel *model1 = [HomePageCellModel modelWithTitle:@"ReactiveObjC基本使用"
                                                          subTitle:@"一些常见的使用语法"
                                                           vcClass:[UsageVC class]
                                                      navigationVC:self.navigationController];
     
-    HomePageCellModel *model2 = [HomePageCellModel modelWithTitle:@"生命周期与内存管理"
+    HomePageCellModel *model2 = [HomePageCellModel modelWithTitle:@"ReactiveCocoa基本使用"
+                                                         subTitle:@"一些常见的使用语法"
+                                                          vcClass:[CocoaUsageVC class]
+                                                     navigationVC:self.navigationController];
+    
+    HomePageCellModel *model3 = [HomePageCellModel modelWithTitle:@"生命周期与内存管理"
                                                          subTitle:@"冷/热信号订阅和取消订阅"
                                                           vcClass:[LifeCycleAndMemoryVC class]
                                                      navigationVC:self.navigationController];
     
-    HomePageCellModel *model3 = [HomePageCellModel modelWithTitle:@"冷/热信号"
+    HomePageCellModel *model4 = [HomePageCellModel modelWithTitle:@"冷/热信号"
                                                          subTitle:@"基本的类图结构"
                                                           vcClass:[ColdHotSignalVC class]
                                                      navigationVC:self.navigationController];
     
-    HomePageCellModel *model4 = [HomePageCellModel modelWithTitle:@"单个信号基本操作"
+    HomePageCellModel *model5 = [HomePageCellModel modelWithTitle:@"单个信号基本操作"
                                                          subTitle:@"一些常见的单信号基本操作"
                                                           vcClass:[SingleOperationsVC class]
                                                      navigationVC:self.navigationController];
     
-    HomePageCellModel *model5 = [HomePageCellModel modelWithTitle:@"多个信号组合操作"
+    HomePageCellModel *model6 = [HomePageCellModel modelWithTitle:@"多个信号组合操作"
                                                          subTitle:@"一些常见的多信号组合操作"
                                                           vcClass:[GroupOperationsVC class]
                                                      navigationVC:self.navigationController];
     
-    HomePageCellModel *model6 = [HomePageCellModel modelWithTitle:@"双向绑定"
+    HomePageCellModel *model7 = [HomePageCellModel modelWithTitle:@"双向绑定"
                                                          subTitle:@"一些常见的双向绑定案例"
                                                           vcClass:[TwoWayBindingVC class]
                                                      navigationVC:self.navigationController];
     
-    HomePageCellModel *model7 = [HomePageCellModel modelWithTitle:@"内存泄漏"
+    HomePageCellModel *model8 = [HomePageCellModel modelWithTitle:@"内存泄漏"
                                                          subTitle:@"一些经典的内存泄漏案例"
                                                           vcClass:[RACMLKVC class]
                                                      navigationVC:self.navigationController];
 
-    HomePageCellModel *model8 = [HomePageCellModel modelWithTitle:@"操场"
+    HomePageCellModel *model9 = [HomePageCellModel modelWithTitle:@"操场"
                                                          subTitle:@"Do whatever you want here"
                                                           vcClass:[PlaygroundVC class]
                                                      navigationVC:self.navigationController];
     
-    self.dataSourceArray = [NSArray arrayWithObjects:model1, model2, model3, model4, model5, model6, model7, model8, nil];
+    self.dataSourceArray = [NSArray arrayWithObjects:model1, model2, model3, model4, model5, model6, model7, model8, model9, nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

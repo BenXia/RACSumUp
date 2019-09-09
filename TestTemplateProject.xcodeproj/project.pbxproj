@@ -41,6 +41,8 @@
 		B507115D1F0E4AB3008EC4AE /* BNPopoverBottomLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B50711571F0E4AB3008EC4AE /* BNPopoverBottomLayout.m */; };
 		B507115E1F0E4AB3008EC4AE /* BNPopoverCustomLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B50711591F0E4AB3008EC4AE /* BNPopoverCustomLayout.m */; };
 		B507115F1F0E4AB3008EC4AE /* BNPopoverCenterLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B507115B1F0E4AB3008EC4AE /* BNPopoverCenterLayout.m */; };
+		B53C6D2A232636DC001E8697 /* CocoaUsageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C6D28232636DC001E8697 /* CocoaUsageVC.swift */; };
+		B53C6D2B232636DC001E8697 /* CocoaUsageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B53C6D29232636DC001E8697 /* CocoaUsageVC.xib */; };
 		B5647F8B1EF8FB4C009CF536 /* BNPopupWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = B5647F8A1EF8FB4C009CF536 /* BNPopupWindow.m */; };
 		B5647F8F1EF9084E009CF536 /* BasePopoverVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B5647F8E1EF9084E009CF536 /* BasePopoverVC.m */; };
 		B5647F991EF90B1F009CF536 /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = B5647F961EF90B1F009CF536 /* MBProgressHUD+Add.m */; };
@@ -128,6 +130,8 @@
 		B507115A1F0E4AB3008EC4AE /* BNPopoverCenterLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNPopoverCenterLayout.h; sourceTree = "<group>"; };
 		B507115B1F0E4AB3008EC4AE /* BNPopoverCenterLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNPopoverCenterLayout.m; sourceTree = "<group>"; };
 		B53C6D2523262FB4001E8697 /* TestTemplateProject-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestTemplateProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		B53C6D28232636DC001E8697 /* CocoaUsageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocoaUsageVC.swift; sourceTree = "<group>"; };
+		B53C6D29232636DC001E8697 /* CocoaUsageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CocoaUsageVC.xib; sourceTree = "<group>"; };
 		B5647F891EF8FB4C009CF536 /* BNPopupWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNPopupWindow.h; sourceTree = "<group>"; };
 		B5647F8A1EF8FB4C009CF536 /* BNPopupWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNPopupWindow.m; sourceTree = "<group>"; };
 		B5647F8D1EF9084E009CF536 /* BasePopoverVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasePopoverVC.h; sourceTree = "<group>"; };
@@ -353,6 +357,8 @@
 				33454B351F764EB700DC3F14 /* UsageVC.h */,
 				33454B361F764EB700DC3F14 /* UsageVC.m */,
 				33454B371F764EB700DC3F14 /* UsageVC.xib */,
+				B53C6D28232636DC001E8697 /* CocoaUsageVC.swift */,
+				B53C6D29232636DC001E8697 /* CocoaUsageVC.xib */,
 			);
 			path = Usage;
 			sourceTree = "<group>";
@@ -644,6 +650,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B595DD521F2098080091242B /* ColdHotSignalVC.xib in Resources */,
+				B53C6D2B232636DC001E8697 /* CocoaUsageVC.xib in Resources */,
 				33454B511F76501D00DC3F14 /* GroupOperationsVC.xib in Resources */,
 				B50394D91EEE71E00016FA97 /* HomePageVC.xib in Resources */,
 				33454B391F764EB700DC3F14 /* UsageVC.xib in Resources */,
@@ -722,6 +729,7 @@
 				B507115D1F0E4AB3008EC4AE /* BNPopoverBottomLayout.m in Sources */,
 				B5647FF41EF912EE009CF536 /* UIImage+Blur.m in Sources */,
 				33144EF91EF05218006D27AC /* NSString+Size.m in Sources */,
+				B53C6D2A232636DC001E8697 /* CocoaUsageVC.swift in Sources */,
 				33144EF61EF05059006D27AC /* UIUtils.m in Sources */,
 				33454B441F764EFD00DC3F14 /* TwoWayBindingVC.m in Sources */,
 				B595DD551F2098310091242B /* ColdHotSignalVM.m in Sources */,
