@@ -11,8 +11,7 @@ import ReactiveCocoa
 import ReactiveSwift
 
 class LyContentView: UIView {
-
-    let (signalTap , observerTap) = Signal<Any, Never>.pipe()
+    let (signalTap, observerTap) = Signal<Any, Never>.pipe()
     
 //    typealias tapBlock = ()->()
 //    
@@ -29,7 +28,6 @@ class LyContentView: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
 }
 
 extension LyContentView {
@@ -47,3 +45,5 @@ extension LyContentView {
 //        taps()
     }
 }
+
+

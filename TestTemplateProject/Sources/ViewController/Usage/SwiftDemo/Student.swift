@@ -9,7 +9,8 @@
 import UIKit
 
 class Student: NSObject {
-
     var friend : String?
     var cat : Int = 0
 }
+
+

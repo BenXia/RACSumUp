@@ -9,7 +9,6 @@
 import UIKit
 
 class Room: NSObject {
-
     var size : Int = 0
     var bag : String?
     
@@ -26,3 +25,5 @@ class Room: NSObject {
 //        
 //    }
 }
+
+

@@ -9,13 +9,11 @@
 import UIKit
 
 class Person: NSObject {
-    
     //1.要设置为可选类型，要不就设置初始值
     var name : String?
     var age  : Int = 0
     var student : Student?
     var room : [Room]?
-    
     
     override func setValue(_ value: Any?, forKey key: String) {
         super.setValue(value, forKey: key)
@@ -27,8 +25,9 @@ extension Person : BaseModelDelegate {
         return ["student" : "Student" as Any]
     }
 
-    
     func arrayContainModelClass() -> ([String : Any]) {
         return ["room" : "Room"]
     }
 }
+
+

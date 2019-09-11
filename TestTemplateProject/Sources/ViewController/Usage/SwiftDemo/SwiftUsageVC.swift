@@ -14,18 +14,10 @@ import ReactiveSwift
 fileprivate let edgeW = 10
 
 @objc(SwiftUsageVC) class SwiftUsageVC: BaseViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setUi()
-        addRac()
-        
-//        let dict = ["name" : "kk" , "age" : 10 , "student" : ["friend" : "zk" , "cat" : 7] , "room" : [["size" : 8 , "bag" : "hello"] , ["size" : 6 , "bag" : "ko"]]] as [String : Any]
-//
-//        let p = Person.modelWithDict(dict : dict as [String : AnyObject]) as? Person
-//        
-//        print(p?.name)
+        initUIRelated()
     }
     
     fileprivate lazy var textFieldNum : UITextField = {
@@ -64,9 +56,7 @@ fileprivate let edgeW = 10
 }
 
 extension SwiftUsageVC {
-    
-    fileprivate func setUi() {
-        
+    fileprivate func initUIRelated() {
         view.addSubview(textFieldNum)
         view.addSubview(textFieldSec)
         view.addSubview(btn)
@@ -99,93 +89,78 @@ extension SwiftUsageVC {
             make.size.equalTo(CGSize(width: 50, height: 50))
         }
     }
-    
-    //RAC的使用
-    fileprivate func addRac() {
-        
-        //账号输入框的信号
-        let signalA = textFieldNum.reactive.continuousTextValues.map { (text) -> Int in
-            return text.count
-        }
-        
-        let signalB = textFieldSec.reactive.continuousTextValues.map { (text) -> Int in
-            return text.count
-        }
-        
-        //多个信号处理btn的是否可以点击属性
-        btn.reactive.isEnabled <~ Signal.combineLatest(signalA, signalB).map({ (a : Int , b : Int) -> Bool in
-            return a > 1 && b > 6
-        })
-        
-        //按钮的点击
-        btn.reactive.controlEvents(UIControl.Event.touchUpInside).observeValues { (btn) in
-            print("登录")
-        }
-        
-        contentView.signalTap.observeValues { (value) in
-            print("点击了view")
-        }
-        
-//        //使用闭包回调
-//        contentView.taps = {
-//            
-//        }
-    }
-    
 }
 
 //MARK: RAC其他用法
 extension SwiftUsageVC {
-    
-    fileprivate func test() {
+    func bindViewModel() {
+        // 1. 最简单的订阅
+//        textFieldNum.reactive.continuousTextValues.observeResult { (result) in
+//            switch result {
+//            case .success(let object):
+//                print("\(object as String)")
+//            case .failure:
+//                print("Error")
+//            }
+//        }
         
-        //1.kvo
-        btn.reactive.values(forKeyPath: "isEnabled").start({ value in
-            print(value)
-        })
+        // 2. 信号处理
+//        textFieldNum.reactive.continuousTextValues.map { (text) -> Int in
+//             return text.count
+//         }.observeResult { (result) in
+//             switch result {
+//                 case .success(let object):
+//                     print("\(object as Int)")
+//                 case .failure:
+//                     print("Error")
+//             }
+//         }
         
-        //2.通知
-        NotificationCenter.default.reactive.notifications(forName: Notification.Name("reloadData"), object: nil).observeValues { (value) in
-            
-        }
+        // 3. 信号过滤
+//        textFieldNum.reactive.continuousTextValues.filter { (text) -> Bool in
+//            return text.count > 3
+//        }.observeResult { (result) in
+//            switch result {
+//            case .success(let object):
+//                print("\(object as String)")
+//            case .failure:
+//                print("Error")
+//            }
+//        }
         
-        //3.textField
-        textFieldNum.reactive.continuousTextValues.observeValues { (text) in
-            
-        }
+        // 4. UIButton 点击信号
+//        btn.reactive.controlEvents(UIControl.Event.touchUpInside).observeValues { (button) in
+//            print("button clicked")
+//        }
         
-        //4.按钮点击
-        btn.reactive.controlEvents(.touchUpInside).observeValues { (btn) in
-            
-        }
-        
-        //5.延时加载
-        QueueScheduler.main.schedule(after: Date(timeIntervalSinceNow: 1.0), action: {
-            
-        })
-        
-        //6.filter作用:过滤   当text>5才会输出
-        textFieldNum.reactive.continuousTextValues.filter { (text) -> Bool in
-            return text.count > 5
-        }.observeValues { (value) in
-            
-        }
-        
-        //7.map
-        textFieldNum.reactive.continuousTextValues.map { (text) -> UIColor in
-            if text.count > 5 {
-                return UIColor.blue
-            } else {
-                return UIColor.red
+        btn.reactive.controlEvents(UIControl.Event.touchUpInside).observeResult({ (result) in
+            switch result {
+            case .success(_):
+                print("button clicked")
+            case .failure:
+                print("Error")
             }
-        }.observeValues { (color) in
-            
+        })
+        
+        // 5. 组合信号
+        // 5.1 冷信号
+        let signalA = textFieldNum.reactive.continuousTextValues.map { (text) -> Bool in
+            return text.count > 3
         }
         
-        //8.多个信号结合使用,热信号
-        let (signalA, observerA) = Signal<String, Never>.pipe()
-        let (signalB, observerB) = Signal<String, Never>.pipe()
-        Signal.combineLatest(signalA, signalB).observeValues { (value) in
+        let signalB = textFieldSec.reactive.continuousTextValues.map { (text) -> Bool in
+            return text.count > 3
+        }
+        
+        // 多个信号处理btn的是否可以点击属性
+        btn.reactive.isEnabled <~ Signal.combineLatest(signalA, signalB).map({ (accountValid : Bool , pwdValid : Bool) -> Bool in
+            return accountValid && pwdValid
+        })
+        
+        // 5.2 热信号
+        let (signalX, observerA) = Signal<String, Never>.pipe()
+        let (signalY, observerB) = Signal<String, Never>.pipe()
+        Signal.combineLatest(signalX, signalY).observeValues { (value) in
             print( "收到的值\(value.0) + \(value.1)")
         }
         observerA.send(value: "1")
@@ -193,14 +168,91 @@ extension SwiftUsageVC {
         observerA.sendCompleted()
         observerB.send(value: "2")
         observerB.sendCompleted()
+        
+        
+        // 6. KVO VS MutableProperty
+        btn.reactive.producer(forKeyPath: "isEnabled").start({ value in
+            print(value)
+        })
+
+        let racValue = MutableProperty<Int>(1)
+        racValue.producer.startWithValues { (make) in
+            print(make)
+        }
+        racValue.value = 10
+        
+        // 7.通知
+        NotificationCenter.default.reactive.notifications(forName: Notification.Name("reloadData"), object: nil).observeValues { (value) in
+            
+        }
+        
+        // 8. 方法调用拦截
+        self.reactive.trigger(for: #selector(UIViewController.viewWillAppear(_:))).observeValues { () in
+            print("viewWillAppear 被调用了")
+        }
+        
+        // 9. 监听对象的生命周期
+//        loginBtn.reactive.controlEvents(.touchUpInside).observeValues{ [weak self] (btn) in
+//            let usageVC = UsageVC()
+//
+//            usageVC.reactive.lifetime.ended.observeCompleted {
+//                print("usageVC 被销毁")
+//            }
+//
+//            self?.navigationController?.pushViewController(usageVC, animated: true)
+//        }
+        
+        // 10. 回调的RAC实现
+//        contentView.signalTap.observeValues { (value) in
+//            print("点击了view")
+//        }
+//
+////        //使用闭包回调
+////        contentView.taps = {
+////
+////        }
+        
+        // 11. 创建自定义的信号
+//        let signal = self.createSignInSignal()
+//
+//        signal.observeResult { (result) in
+//            switch result {
+//            case .success(let object):
+//                print("\(object as Bool)")
+//            case .failure:
+//                print("Error")
+//            }
+//        }
+        
+        
+        // 12.延时加载
+        QueueScheduler.main.schedule(after: Date(timeIntervalSinceNow: 1.0), action: {
+
+        })
     }
     
+    private func createSignInSignal() -> Signal<Bool, Never> {
+        let (signInSignal, observer) = Signal<Bool, Never>.pipe()
+        
+        DispatchQueue.main.asyncAfter(deadline:DispatchTime.now()+0.5) {
+            observer.send(value: true)
+            observer.sendCompleted()
+        }
+        
+//        self.signInService.signIn(withUsername: self.usernameTextField.text!, andPassword: self.passwordTextField.text!) {
+//            success in
+//
+//            observer.send(value: success)
+//            observer.sendCompleted()
+//        }
+        
+        return signInSignal
+    }
 }
 
 extension SwiftUsageVC {
-    
     //1.将颜色 -> 图片
-    class func creatImageWithColor(color:UIColor) -> UIImage{
+    class func creatImageWithColor(color:UIColor) -> UIImage {
         let rect = CGRect(x: 0.0, y: 0.0, width: 1.0, height: 1.0)
         UIGraphicsBeginImageContext(rect.size)
         let context = UIGraphicsGetCurrentContext()
@@ -211,4 +263,5 @@ extension SwiftUsageVC {
         return image!
     }
 }
+
 

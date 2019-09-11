@@ -39,11 +39,8 @@
 		B507115D1F0E4AB3008EC4AE /* BNPopoverBottomLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B50711571F0E4AB3008EC4AE /* BNPopoverBottomLayout.m */; };
 		B507115E1F0E4AB3008EC4AE /* BNPopoverCustomLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B50711591F0E4AB3008EC4AE /* BNPopoverCustomLayout.m */; };
 		B507115F1F0E4AB3008EC4AE /* BNPopoverCenterLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B507115B1F0E4AB3008EC4AE /* BNPopoverCenterLayout.m */; };
-		B53C6D2A232636DC001E8697 /* CocoaUsageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C6D28232636DC001E8697 /* CocoaUsageVC.swift */; };
-		B53C6D2B232636DC001E8697 /* CocoaUsageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B53C6D29232636DC001E8697 /* CocoaUsageVC.xib */; };
 		B53C6F672328EB70001E8697 /* SwiftUsageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C6F5B2328EB70001E8697 /* SwiftUsageVC.swift */; };
 		B53C6F682328EB70001E8697 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C6F5C2328EB70001E8697 /* Person.swift */; };
-		B53C6F692328EB70001E8697 /* NSObject-model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C6F5D2328EB70001E8697 /* NSObject-model.swift */; };
 		B53C6F6A2328EB70001E8697 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C6F5E2328EB70001E8697 /* Room.swift */; };
 		B53C6F6B2328EB70001E8697 /* LyContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C6F5F2328EB70001E8697 /* LyContentView.swift */; };
 		B53C6F6C2328EB70001E8697 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C6F602328EB70001E8697 /* BaseModel.swift */; };
@@ -52,6 +49,7 @@
 		B53C6F6F2328EB70001E8697 /* LyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B53C6F652328EB70001E8697 /* LyViewController.m */; };
 		B53C6FAE2328F699001E8697 /* LyHeardView.m in Sources */ = {isa = PBXBuildFile; fileRef = B53C6FA82328F698001E8697 /* LyHeardView.m */; };
 		B53C6FAF2328F699001E8697 /* LyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B53C6FAB2328F699001E8697 /* LyModel.m */; };
+		B53C709123291118001E8697 /* NSObject-model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C709023291117001E8697 /* NSObject-model.swift */; };
 		B5647F8B1EF8FB4C009CF536 /* BNPopupWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = B5647F8A1EF8FB4C009CF536 /* BNPopupWindow.m */; };
 		B5647F8F1EF9084E009CF536 /* BasePopoverVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B5647F8E1EF9084E009CF536 /* BasePopoverVC.m */; };
 		B5647F991EF90B1F009CF536 /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = B5647F961EF90B1F009CF536 /* MBProgressHUD+Add.m */; };
@@ -136,11 +134,8 @@
 		B507115A1F0E4AB3008EC4AE /* BNPopoverCenterLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNPopoverCenterLayout.h; sourceTree = "<group>"; };
 		B507115B1F0E4AB3008EC4AE /* BNPopoverCenterLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNPopoverCenterLayout.m; sourceTree = "<group>"; };
 		B53C6D2523262FB4001E8697 /* TestTemplateProject-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestTemplateProject-Bridging-Header.h"; sourceTree = "<group>"; };
-		B53C6D28232636DC001E8697 /* CocoaUsageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocoaUsageVC.swift; sourceTree = "<group>"; };
-		B53C6D29232636DC001E8697 /* CocoaUsageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CocoaUsageVC.xib; sourceTree = "<group>"; };
 		B53C6F5B2328EB70001E8697 /* SwiftUsageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUsageVC.swift; sourceTree = "<group>"; };
 		B53C6F5C2328EB70001E8697 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		B53C6F5D2328EB70001E8697 /* NSObject-model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject-model.swift"; sourceTree = "<group>"; };
 		B53C6F5E2328EB70001E8697 /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		B53C6F5F2328EB70001E8697 /* LyContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LyContentView.swift; sourceTree = "<group>"; };
 		B53C6F602328EB70001E8697 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
@@ -153,6 +148,7 @@
 		B53C6FAA2328F698001E8697 /* LyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LyModel.h; sourceTree = "<group>"; };
 		B53C6FAB2328F699001E8697 /* LyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LyModel.m; sourceTree = "<group>"; };
 		B53C6FAC2328F699001E8697 /* LyHeardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LyHeardView.h; sourceTree = "<group>"; };
+		B53C709023291117001E8697 /* NSObject-model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject-model.swift"; sourceTree = "<group>"; };
 		B5647F891EF8FB4C009CF536 /* BNPopupWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNPopupWindow.h; sourceTree = "<group>"; };
 		B5647F8A1EF8FB4C009CF536 /* BNPopupWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNPopupWindow.m; sourceTree = "<group>"; };
 		B5647F8D1EF9084E009CF536 /* BasePopoverVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasePopoverVC.h; sourceTree = "<group>"; };
@@ -377,8 +373,6 @@
 			children = (
 				B53C6F622328EB70001E8697 /* ObjCDemo */,
 				B53C6F5A2328EB70001E8697 /* SwiftDemo */,
-				B53C6D28232636DC001E8697 /* CocoaUsageVC.swift */,
-				B53C6D29232636DC001E8697 /* CocoaUsageVC.xib */,
 			);
 			path = Usage;
 			sourceTree = "<group>";
@@ -491,7 +485,7 @@
 				B53C6F5C2328EB70001E8697 /* Person.swift */,
 				B53C6F5E2328EB70001E8697 /* Room.swift */,
 				B53C6F602328EB70001E8697 /* BaseModel.swift */,
-				B53C6F5D2328EB70001E8697 /* NSObject-model.swift */,
+				B53C709023291117001E8697 /* NSObject-model.swift */,
 			);
 			path = SwiftDemo;
 			sourceTree = "<group>";
@@ -699,7 +693,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B595DD521F2098080091242B /* ColdHotSignalVC.xib in Resources */,
-				B53C6D2B232636DC001E8697 /* CocoaUsageVC.xib in Resources */,
 				33454B511F76501D00DC3F14 /* GroupOperationsVC.xib in Resources */,
 				B50394D91EEE71E00016FA97 /* HomePageVC.xib in Resources */,
 				33454B451F764EFD00DC3F14 /* TwoWayBindingVC.xib in Resources */,
@@ -778,7 +771,6 @@
 				B53C6FAF2328F699001E8697 /* LyModel.m in Sources */,
 				B5647FF41EF912EE009CF536 /* UIImage+Blur.m in Sources */,
 				33144EF91EF05218006D27AC /* NSString+Size.m in Sources */,
-				B53C6D2A232636DC001E8697 /* CocoaUsageVC.swift in Sources */,
 				33144EF61EF05059006D27AC /* UIUtils.m in Sources */,
 				33454B441F764EFD00DC3F14 /* TwoWayBindingVC.m in Sources */,
 				B595DD551F2098310091242B /* ColdHotSignalVM.m in Sources */,
@@ -793,6 +785,7 @@
 				B50711511F0E4A4A008EC4AE /* BNPopoverWindow.m in Sources */,
 				B53C6F6C2328EB70001E8697 /* BaseModel.swift in Sources */,
 				B50394DE1EEE71FB0016FA97 /* PlaygroundVC.m in Sources */,
+				B53C709123291118001E8697 /* NSObject-model.swift in Sources */,
 				B595DD5D1F2099BE0091242B /* RACSignal+Extension.m in Sources */,
 				330F7BF61ED333F00009280A /* AppDelegate.m in Sources */,
 				B53C6F672328EB70001E8697 /* SwiftUsageVC.swift in Sources */,
@@ -807,7 +800,6 @@
 				330F7C0D1ED349AB0009280A /* UIView+Helper.m in Sources */,
 				B53C6F6F2328EB70001E8697 /* LyViewController.m in Sources */,
 				B53C6F6D2328EB70001E8697 /* Student.swift in Sources */,
-				B53C6F692328EB70001E8697 /* NSObject-model.swift in Sources */,
 				B53C6F6B2328EB70001E8697 /* LyContentView.swift in Sources */,
 				B53C6F6E2328EB70001E8697 /* ObjCUsageVC.m in Sources */,
 				B5647FA71EF90EC1009CF536 /* GCDGroup.m in Sources */,

@@ -9,7 +9,6 @@
 import UIKit
 
 @objc protocol BaseModelDelegate : NSObjectProtocol {
-    
     //非必须实现的协议
     
     /* 字典数组 dictArray
@@ -25,11 +24,9 @@ import UIKit
      例子 ： return ["student" : "Student" as Any]
      */
     @objc optional func dictContainModelClass() -> ([String : Any])
-    
 }
 
 extension NSObject {
-    
 //    class func modelWithDict(dict : [String : Any]) -> NSObject {
 //        
 //        let objc = self.init()
@@ -113,5 +110,6 @@ extension NSObject {
         }
         return newDic
     }
-
 }
+
+

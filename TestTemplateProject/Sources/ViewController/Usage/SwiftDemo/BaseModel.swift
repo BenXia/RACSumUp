@@ -9,7 +9,6 @@
 import UIKit
 
 class BaseModel: NSObject {
-
 //    class func modelWithDict(dict : [String : AnyObject]) -> AnyObject {
 //
 ////        let objc = self
@@ -97,5 +96,6 @@ class BaseModel: NSObject {
 //        }
 //        return newDic
 //    }
-    
 }
+
+
