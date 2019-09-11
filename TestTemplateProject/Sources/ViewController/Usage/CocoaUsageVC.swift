@@ -57,11 +57,11 @@ class CocoaUsageVC: BaseViewController {
 //        }
         
         // 4. UIButton 点击信号
-//        accountTextField.reactive.controlEvents(UIControl.Event.touchUpInside).observeValues { (button) in
+//        loginBtn.reactive.controlEvents(UIControl.Event.touchUpInside).observeValues { (button) in
 //            print("button clicked")
 //        }
         
-        accountTextField.reactive.controlEvents(UIControl.Event.touchUpInside).observeResult({ (result) in
+        loginBtn.reactive.controlEvents(UIControl.Event.touchUpInside).observeResult({ (result) in
             switch result {
             case .success(_):
                 print("button clicked")
@@ -71,59 +71,17 @@ class CocoaUsageVC: BaseViewController {
         })
         
         // 5. 组合信号
-//        let accountSignal = accountTextField.reactive.continuousTextValues.filter { (text) -> Bool in
-//            return text.count > 3
-//        }
-//        let passwordSignal = passwordTextField.reactive.continuousTextValues.filter { (text) -> Bool in
-//            return text.count > 3
-//        }
-        
-        //let signal = Signal.combineLatest(accountSignal, passwordSignal).map { $0 && $1 }
-        
-        //loginBtn.reactive.isEnabled <~ accountSignal
-        
-        //loginBtn.reactive.isEnabled <~ accountSignal.combineLatest(with: passwordSignal).map({ $0 && $1 })
-        //loginBtn.reactive.isEnabled <~ accountSignal.combineLatest(with: passwordSignal).map{ (accountValid, pwdValid) -> Bool in
-//            if let value = tuple {
-//                let tuple: RACTuple = value
-//
-//                var accountValid: Bool = false
-//                var pwdValid: Bool = false
-//
-//                if let valid = tuple.first {
-//                    if valid is Bool {
-//                        accountValid = valid as! Bool
-//                    }
-//                }
-//                if let valid2 = tuple.second {
-//                    if valid2 is Bool {
-//                        pwdValid = valid2 as! Bool
-//                    }
-//                }
-//
-//                return accountValid && pwdValid
-//            } else {
-//                return false
-//            }
-
-//        }
-        
-        let signalA = accountTextField.reactive.continuousTextValues.map { (text) -> Int in
-            
-            return text.count
-//            return (text?.characters.count)!
+        let signalA = accountTextField.reactive.continuousTextValues.map { (text) -> Bool in
+            return text.count > 3
         }
         
-        let signalB = passwordTextField.reactive.continuousTextValues.map { (text) -> Int in
-            
-            return text.count
-            
-//            return (text?.characters.count)!
+        let signalB = passwordTextField.reactive.continuousTextValues.map { (text) -> Bool in
+            return text.count > 3
         }
         
         //多个信号处理btn的是否可以点击属性
-        loginBtn.reactive.isEnabled <~ Signal.combineLatest(signalA, signalB).map({ (a : Int , b : Int) -> Bool in
-            return a > 1 && b > 6
+        loginBtn.reactive.isEnabled <~ Signal.combineLatest(signalA, signalB).map({ (accountValid : Bool , pwdValid : Bool) -> Bool in
+            return accountValid && pwdValid
         })
         
         

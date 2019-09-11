@@ -19,8 +19,6 @@
 		331B4D3222ED82C600BE1A47 /* RACMLKVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 331B4D3022ED82C600BE1A47 /* RACMLKVC.xib */; };
 		33454B321F764DB900DC3F14 /* LifeCycleAndMemoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33454B301F764DB900DC3F14 /* LifeCycleAndMemoryVC.m */; };
 		33454B331F764DB900DC3F14 /* LifeCycleAndMemoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33454B311F764DB900DC3F14 /* LifeCycleAndMemoryVC.xib */; };
-		33454B381F764EB700DC3F14 /* UsageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33454B361F764EB700DC3F14 /* UsageVC.m */; };
-		33454B391F764EB700DC3F14 /* UsageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33454B371F764EB700DC3F14 /* UsageVC.xib */; };
 		33454B441F764EFD00DC3F14 /* TwoWayBindingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33454B421F764EFD00DC3F14 /* TwoWayBindingVC.m */; };
 		33454B451F764EFD00DC3F14 /* TwoWayBindingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33454B431F764EFD00DC3F14 /* TwoWayBindingVC.xib */; };
 		33454B4B1F76501000DC3F14 /* SingleOperationsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33454B491F76501000DC3F14 /* SingleOperationsVC.m */; };
@@ -43,6 +41,17 @@
 		B507115F1F0E4AB3008EC4AE /* BNPopoverCenterLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B507115B1F0E4AB3008EC4AE /* BNPopoverCenterLayout.m */; };
 		B53C6D2A232636DC001E8697 /* CocoaUsageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C6D28232636DC001E8697 /* CocoaUsageVC.swift */; };
 		B53C6D2B232636DC001E8697 /* CocoaUsageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B53C6D29232636DC001E8697 /* CocoaUsageVC.xib */; };
+		B53C6F672328EB70001E8697 /* SwiftUsageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C6F5B2328EB70001E8697 /* SwiftUsageVC.swift */; };
+		B53C6F682328EB70001E8697 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C6F5C2328EB70001E8697 /* Person.swift */; };
+		B53C6F692328EB70001E8697 /* NSObject-model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C6F5D2328EB70001E8697 /* NSObject-model.swift */; };
+		B53C6F6A2328EB70001E8697 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C6F5E2328EB70001E8697 /* Room.swift */; };
+		B53C6F6B2328EB70001E8697 /* LyContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C6F5F2328EB70001E8697 /* LyContentView.swift */; };
+		B53C6F6C2328EB70001E8697 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C6F602328EB70001E8697 /* BaseModel.swift */; };
+		B53C6F6D2328EB70001E8697 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C6F612328EB70001E8697 /* Student.swift */; };
+		B53C6F6E2328EB70001E8697 /* ObjCUsageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B53C6F642328EB70001E8697 /* ObjCUsageVC.m */; };
+		B53C6F6F2328EB70001E8697 /* LyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B53C6F652328EB70001E8697 /* LyViewController.m */; };
+		B53C6FAE2328F699001E8697 /* LyHeardView.m in Sources */ = {isa = PBXBuildFile; fileRef = B53C6FA82328F698001E8697 /* LyHeardView.m */; };
+		B53C6FAF2328F699001E8697 /* LyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B53C6FAB2328F699001E8697 /* LyModel.m */; };
 		B5647F8B1EF8FB4C009CF536 /* BNPopupWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = B5647F8A1EF8FB4C009CF536 /* BNPopupWindow.m */; };
 		B5647F8F1EF9084E009CF536 /* BasePopoverVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B5647F8E1EF9084E009CF536 /* BasePopoverVC.m */; };
 		B5647F991EF90B1F009CF536 /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = B5647F961EF90B1F009CF536 /* MBProgressHUD+Add.m */; };
@@ -90,9 +99,6 @@
 		33454B2F1F764DB900DC3F14 /* LifeCycleAndMemoryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LifeCycleAndMemoryVC.h; sourceTree = "<group>"; };
 		33454B301F764DB900DC3F14 /* LifeCycleAndMemoryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LifeCycleAndMemoryVC.m; sourceTree = "<group>"; };
 		33454B311F764DB900DC3F14 /* LifeCycleAndMemoryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LifeCycleAndMemoryVC.xib; sourceTree = "<group>"; };
-		33454B351F764EB700DC3F14 /* UsageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsageVC.h; sourceTree = "<group>"; };
-		33454B361F764EB700DC3F14 /* UsageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsageVC.m; sourceTree = "<group>"; };
-		33454B371F764EB700DC3F14 /* UsageVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UsageVC.xib; sourceTree = "<group>"; };
 		33454B411F764EFD00DC3F14 /* TwoWayBindingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoWayBindingVC.h; sourceTree = "<group>"; };
 		33454B421F764EFD00DC3F14 /* TwoWayBindingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoWayBindingVC.m; sourceTree = "<group>"; };
 		33454B431F764EFD00DC3F14 /* TwoWayBindingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwoWayBindingVC.xib; sourceTree = "<group>"; };
@@ -132,6 +138,21 @@
 		B53C6D2523262FB4001E8697 /* TestTemplateProject-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestTemplateProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		B53C6D28232636DC001E8697 /* CocoaUsageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocoaUsageVC.swift; sourceTree = "<group>"; };
 		B53C6D29232636DC001E8697 /* CocoaUsageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CocoaUsageVC.xib; sourceTree = "<group>"; };
+		B53C6F5B2328EB70001E8697 /* SwiftUsageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUsageVC.swift; sourceTree = "<group>"; };
+		B53C6F5C2328EB70001E8697 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		B53C6F5D2328EB70001E8697 /* NSObject-model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject-model.swift"; sourceTree = "<group>"; };
+		B53C6F5E2328EB70001E8697 /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		B53C6F5F2328EB70001E8697 /* LyContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LyContentView.swift; sourceTree = "<group>"; };
+		B53C6F602328EB70001E8697 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		B53C6F612328EB70001E8697 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		B53C6F632328EB70001E8697 /* LyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LyViewController.h; sourceTree = "<group>"; };
+		B53C6F642328EB70001E8697 /* ObjCUsageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjCUsageVC.m; sourceTree = "<group>"; };
+		B53C6F652328EB70001E8697 /* LyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LyViewController.m; sourceTree = "<group>"; };
+		B53C6F662328EB70001E8697 /* ObjCUsageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCUsageVC.h; sourceTree = "<group>"; };
+		B53C6FA82328F698001E8697 /* LyHeardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LyHeardView.m; sourceTree = "<group>"; };
+		B53C6FAA2328F698001E8697 /* LyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LyModel.h; sourceTree = "<group>"; };
+		B53C6FAB2328F699001E8697 /* LyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LyModel.m; sourceTree = "<group>"; };
+		B53C6FAC2328F699001E8697 /* LyHeardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LyHeardView.h; sourceTree = "<group>"; };
 		B5647F891EF8FB4C009CF536 /* BNPopupWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNPopupWindow.h; sourceTree = "<group>"; };
 		B5647F8A1EF8FB4C009CF536 /* BNPopupWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNPopupWindow.m; sourceTree = "<group>"; };
 		B5647F8D1EF9084E009CF536 /* BasePopoverVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasePopoverVC.h; sourceTree = "<group>"; };
@@ -354,9 +375,8 @@
 		33454B341F764EA600DC3F14 /* Usage */ = {
 			isa = PBXGroup;
 			children = (
-				33454B351F764EB700DC3F14 /* UsageVC.h */,
-				33454B361F764EB700DC3F14 /* UsageVC.m */,
-				33454B371F764EB700DC3F14 /* UsageVC.xib */,
+				B53C6F622328EB70001E8697 /* ObjCDemo */,
+				B53C6F5A2328EB70001E8697 /* SwiftDemo */,
 				B53C6D28232636DC001E8697 /* CocoaUsageVC.swift */,
 				B53C6D29232636DC001E8697 /* CocoaUsageVC.xib */,
 			);
@@ -460,6 +480,35 @@
 				B50711591F0E4AB3008EC4AE /* BNPopoverCustomLayout.m */,
 			);
 			path = BNPopoverLayoutStrategy;
+			sourceTree = "<group>";
+		};
+		B53C6F5A2328EB70001E8697 /* SwiftDemo */ = {
+			isa = PBXGroup;
+			children = (
+				B53C6F5B2328EB70001E8697 /* SwiftUsageVC.swift */,
+				B53C6F5F2328EB70001E8697 /* LyContentView.swift */,
+				B53C6F612328EB70001E8697 /* Student.swift */,
+				B53C6F5C2328EB70001E8697 /* Person.swift */,
+				B53C6F5E2328EB70001E8697 /* Room.swift */,
+				B53C6F602328EB70001E8697 /* BaseModel.swift */,
+				B53C6F5D2328EB70001E8697 /* NSObject-model.swift */,
+			);
+			path = SwiftDemo;
+			sourceTree = "<group>";
+		};
+		B53C6F622328EB70001E8697 /* ObjCDemo */ = {
+			isa = PBXGroup;
+			children = (
+				B53C6F662328EB70001E8697 /* ObjCUsageVC.h */,
+				B53C6F642328EB70001E8697 /* ObjCUsageVC.m */,
+				B53C6F632328EB70001E8697 /* LyViewController.h */,
+				B53C6F652328EB70001E8697 /* LyViewController.m */,
+				B53C6FAC2328F699001E8697 /* LyHeardView.h */,
+				B53C6FA82328F698001E8697 /* LyHeardView.m */,
+				B53C6FAA2328F698001E8697 /* LyModel.h */,
+				B53C6FAB2328F699001E8697 /* LyModel.m */,
+			);
+			path = ObjCDemo;
 			sourceTree = "<group>";
 		};
 		B5647F871EF8FAEC009CF536 /* Common */ = {
@@ -653,7 +702,6 @@
 				B53C6D2B232636DC001E8697 /* CocoaUsageVC.xib in Resources */,
 				33454B511F76501D00DC3F14 /* GroupOperationsVC.xib in Resources */,
 				B50394D91EEE71E00016FA97 /* HomePageVC.xib in Resources */,
-				33454B391F764EB700DC3F14 /* UsageVC.xib in Resources */,
 				33454B451F764EFD00DC3F14 /* TwoWayBindingVC.xib in Resources */,
 				B50394DF1EEE71FB0016FA97 /* PlaygroundVC.xib in Resources */,
 				330F7C021ED334380009280A /* Assets.xcassets in Resources */,
@@ -727,6 +775,7 @@
 			files = (
 				33454B501F76501D00DC3F14 /* GroupOperationsVC.m in Sources */,
 				B507115D1F0E4AB3008EC4AE /* BNPopoverBottomLayout.m in Sources */,
+				B53C6FAF2328F699001E8697 /* LyModel.m in Sources */,
 				B5647FF41EF912EE009CF536 /* UIImage+Blur.m in Sources */,
 				33144EF91EF05218006D27AC /* NSString+Size.m in Sources */,
 				B53C6D2A232636DC001E8697 /* CocoaUsageVC.swift in Sources */,
@@ -738,11 +787,15 @@
 				B5FA68AE1EF26F870077349C /* BNNavigationController.m in Sources */,
 				B5647FA81EF90EC1009CF536 /* GCDQueue.m in Sources */,
 				B50394D81EEE71E00016FA97 /* HomePageVC.m in Sources */,
+				B53C6F682328EB70001E8697 /* Person.swift in Sources */,
+				B53C6F6A2328EB70001E8697 /* Room.swift in Sources */,
 				33454B321F764DB900DC3F14 /* LifeCycleAndMemoryVC.m in Sources */,
 				B50711511F0E4A4A008EC4AE /* BNPopoverWindow.m in Sources */,
+				B53C6F6C2328EB70001E8697 /* BaseModel.swift in Sources */,
 				B50394DE1EEE71FB0016FA97 /* PlaygroundVC.m in Sources */,
 				B595DD5D1F2099BE0091242B /* RACSignal+Extension.m in Sources */,
 				330F7BF61ED333F00009280A /* AppDelegate.m in Sources */,
+				B53C6F672328EB70001E8697 /* SwiftUsageVC.swift in Sources */,
 				B507115F1F0E4AB3008EC4AE /* BNPopoverCenterLayout.m in Sources */,
 				33454B4B1F76501000DC3F14 /* SingleOperationsVC.m in Sources */,
 				B5647F9A1EF90B1F009CF536 /* MBProgressHUD.m in Sources */,
@@ -752,12 +805,17 @@
 				B5647F9D1EF90E7C009CF536 /* UIView+Hierarchy.m in Sources */,
 				B595DD511F2098080091242B /* ColdHotSignalVC.m in Sources */,
 				330F7C0D1ED349AB0009280A /* UIView+Helper.m in Sources */,
-				33454B381F764EB700DC3F14 /* UsageVC.m in Sources */,
+				B53C6F6F2328EB70001E8697 /* LyViewController.m in Sources */,
+				B53C6F6D2328EB70001E8697 /* Student.swift in Sources */,
+				B53C6F692328EB70001E8697 /* NSObject-model.swift in Sources */,
+				B53C6F6B2328EB70001E8697 /* LyContentView.swift in Sources */,
+				B53C6F6E2328EB70001E8697 /* ObjCUsageVC.m in Sources */,
 				B5647FA71EF90EC1009CF536 /* GCDGroup.m in Sources */,
 				B50711521F0E4A4A008EC4AE /* BNPopoverWindowRootVC.m in Sources */,
 				B5647FA91EF90EC1009CF536 /* GCDSemaphore.m in Sources */,
 				331B4D3122ED82C600BE1A47 /* RACMLKVC.m in Sources */,
 				B57046261F693854006476E2 /* TestModel.m in Sources */,
+				B53C6FAE2328F699001E8697 /* LyHeardView.m in Sources */,
 				B595DD5C1F2099BE0091242B /* RACCommand+Extension.m in Sources */,
 				B5FA68AF1EF26F870077349C /* BNTabBarController.m in Sources */,
 				330F7C001ED333F00009280A /* main.m in Sources */,

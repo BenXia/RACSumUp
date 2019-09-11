@@ -1,13 +1,15 @@
 //
-//  UsageVC.h
+//  ObjCUsageVC.h
 //  TestTemplateProject
 //
 //  Created by Ben on 2017/9/23.
 //  Copyright © 2017年 iOSStudio. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface UsageVC : BaseViewController
+@interface ObjCUsageVC : BaseViewController
 
 @end
+
+

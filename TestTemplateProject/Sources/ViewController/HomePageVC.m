@@ -8,7 +8,7 @@
 
 #import "HomePageVC.h"
 #import "ColdHotSignalVC.h"
-#import "UsageVC.h"
+#import "ObjCUsageVC.h"
 #import "SingleOperationsVC.h"
 #import "GroupOperationsVC.h"
 #import "TwoWayBindingVC.h"
@@ -82,12 +82,12 @@ static const CGFloat kTableViewCellHeight = 60.0f;
     
     HomePageCellModel *model1 = [HomePageCellModel modelWithTitle:@"ReactiveObjC基本使用"
                                                          subTitle:@"一些常见的使用语法"
-                                                          vcClass:[UsageVC class]
+                                                          vcClass:[ObjCUsageVC class]
                                                      navigationVC:self.navigationController];
     
-    HomePageCellModel *model2 = [HomePageCellModel modelWithTitle:@"ReactiveCocoa基本使用"
+    HomePageCellModel *model2 = [HomePageCellModel modelWithTitle:@"ReactiveSwift基本使用"
                                                          subTitle:@"一些常见的使用语法"
-                                                          vcClass:[CocoaUsageVC class]
+                                                          vcClass:[SwiftUsageVC class]
                                                      navigationVC:self.navigationController];
     
     HomePageCellModel *model3 = [HomePageCellModel modelWithTitle:@"生命周期与内存管理"
