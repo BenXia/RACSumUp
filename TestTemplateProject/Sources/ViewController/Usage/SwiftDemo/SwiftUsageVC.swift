@@ -18,6 +18,8 @@ fileprivate let edgeW = 10
         super.viewDidLoad()
         
         initUIRelated()
+        
+        compareColdAndHotSignal()
     }
     
     fileprivate lazy var textFieldNum : UITextField = {
@@ -226,9 +228,38 @@ extension SwiftUsageVC {
         
         
         // 12.延时加载
-        QueueScheduler.main.schedule(after: Date(timeIntervalSinceNow: 1.0), action: {
+        QueueScheduler.main.schedule(after: Date(timeIntervalSinceNow: 1.0)){
+            print("主线程调用")
+        }
+        
+        QueueScheduler.init().schedule(after: Date.init(timeIntervalSinceNow: 0.3)){
+            print("子线程调用")
+        }
+        
+        // 13. 迭代器
+        // 数组的迭代器
+        let array:[String] = ["name","name2"]
+        var arrayIterator =  array.makeIterator()
+        while let temp = arrayIterator.next() {
+            print(temp)
+        }
 
-        })
+        // swift 系统自带的遍历
+        array.forEach { (value) in
+            print(value)
+        }
+        
+        // 字典的迭代器
+        let dict:[String: String] = ["key":"name", "key1":"name1"]
+        var dictIterator =  dict.makeIterator()
+        while let temp = dictIterator.next() {
+            print(temp)
+        }
+        
+        // swift 系统自带的遍历
+        dict.forEach { (key, value) in
+            print("\(key) + \(value)")
+        }
     }
     
     private func createSignInSignal() -> Signal<Bool, Never> {
@@ -247,6 +278,84 @@ extension SwiftUsageVC {
 //        }
         
         return signInSignal
+    }
+}
+
+extension SwiftUsageVC {
+    // 比较冷热信号
+    // Swift中，SignalProducer 对应 RACSignal 为冷信号， Signal 对应的 RACSubject 为热信号。
+    // 1.冷信号模式，是被动的，需要有人订阅才开启热信号，热信号是主动的,就算没有订阅者也会即刻推送;
+    //   热信号可以有多个订阅者,一对多;冷信号只能一对一,当有新的订阅者,信号是重新完整发送的
+    //   形象的说：热信号像是直播,冷信号像是点播
+    // 2.冷信号个人用来进行网络请求，热信号进行类似代理或者通知的数据传递模式，
+    //
+    // 这样就可以简单的理解为，RAC其实就是把apple的一套 delegate，Notification，KVO等一系列方法综合起来了，用起来更舒服罢了。
+    
+    private func compareColdAndHotSignal() {
+        // 1.1 冷信号
+        let loadDataAction = Action.init(execute: getChatArray)
+        loadDataAction.apply().start()
+        
+        // observer 监听
+        loadDataAction.events.observe({ (event) in
+            print(event)
+        })
+        
+        // 1.2 冷信号
+        let producer = SignalProducer<String, Never>.init { (observer, _) in
+            print("新的订阅，启动操作")
+            observer.send(value: "Hello")
+            observer.send(value: "World")
+        }
+        
+        let subscriber1 = Signal<String, Never>.Observer{ print("观察者1接收到值 \($0)") }
+        let subscriber2 = Signal<String, Never>.Observer{ print("观察者2接收到值 \($0)") }
+        print("观察者1订阅信号发生器")
+        producer.start(subscriber1)
+        print("观察者2订阅信号发生器")
+        producer.start(subscriber2)
+        //注意：发生器将再次启动工作
+        
+        
+        // 2. 创建热信号
+        let (signalA, observerA) = Signal<String, Never>.pipe()
+        let (signalB, observerB) = Signal<String, Never>.pipe()
+        
+        // 联合信号
+        Signal.combineLatest(signalA, signalB).observeValues { (value) in
+            print( "收到的值\(value.0) + \(value.1)")
+        }
+        
+        observerA.send(value: "1")
+        //注意:如果加这个就是，发了一次信号就不能再发了
+        observerA.sendCompleted()
+        observerB.send(value: "2")
+        observerB.sendCompleted()
+        
+        
+        
+        // 3. 创建空信号
+        let emptySignal = Signal<Any, Never>.empty
+        emptySignal.observe { (event) in
+            
+        }
+        
+    }
+    
+    func getChatArray() -> SignalProducer<Any, Never> {
+        return SignalProducer<Any, Never>.init { (observer, _) in
+//            self.request.GET(url: Host, paras: nil, success: { (request, response) in
+//                if let response = response {
+//                    self.dataArray = self.WebArray()
+//
+                    observer.send(value: "1")
+                    
+                    observer.sendCompleted()
+//                }
+//            }, failure: { (request, error) in
+//                observer.sendCompleted()
+//            })
+        }
     }
 }
 
