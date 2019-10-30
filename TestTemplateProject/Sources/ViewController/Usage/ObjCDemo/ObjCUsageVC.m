@@ -66,6 +66,8 @@
         
         self.btn.enabled = (str1.length > 0 && str2.length > 0);
     }];
+    
+    [self test6];
 }
 
 - (void)initData {
@@ -425,7 +427,7 @@ RACSequence:RAC中的集合类，用于代替NSArray,NSDictionary,可以使用�
     // 五、监听当前命令是否正在执行executing
     
     // 六、使用场景,监听按钮点击，网络请求
-    
+    static int s_value = 0;
     
     // 1.创建命令
     RACCommand *command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
@@ -437,21 +439,26 @@ RACSequence:RAC中的集合类，用于代替NSArray,NSDictionary,可以使用�
         // 2.创建信号,用来传递数据
         return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
             
-            [subscriber sendNext:@"请求数据"];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                s_value++;
+                
+                [subscriber sendNext:@(s_value)];
+                
+                // 注意：数据传递完，最好调用sendCompleted，这时命令才执行完毕。
+                [subscriber sendCompleted];
+                
+            });
             
-            // 注意：数据传递完，最好调用sendCompleted，这时命令才执行完毕。
-            [subscriber sendCompleted];
+
             
             return nil;
         }];
     }];
     
+    //command.allowsConcurrentExecution = YES;
+    
     // 强引用命令，不要被销毁，否则接收不到数据
     _command = command;
-    
-    
-    // 3.执行命令
-    [self.command execute:@1];
     
     // 4.订阅RACCommand中的信号
     [command.executionSignals subscribeNext:^(id x) {
@@ -462,20 +469,32 @@ RACSequence:RAC中的集合类，用于代替NSArray,NSDictionary,可以使用�
     
     // RAC高级用法
     // switchToLatest:用于signal of signals，获取signal of signals发出的最新信号,也就是可以直接拿到RACCommand中的信号
-    [command.executionSignals.switchToLatest subscribeNext:^(id x) {
-        NSLog(@"%@",x);
-    }];
+//    [command.executionSignals.switchToLatest subscribeNext:^(id x) {
+//        NSLog(@"%@",x);
+//    }];
     
     // 5.监听命令是否执行完毕,默认会来一次，可以直接跳过，skip表示跳过第一次信号。
     [[command.executing skip:1] subscribeNext:^(id x) {
         if ([x boolValue] == YES) {
             // 正在执行
             NSLog(@"正在执行");
-            
+
         } else {
             // 执行完成
             NSLog(@"执行完成");
         }
+    }];
+    
+    // 3.执行命令
+    [[self.command execute:@1] subscribeNext:^(id  _Nullable x) {
+        NSLog (@"get next value in 1 : %@", x);
+    } error:^(NSError * _Nullable error) {
+        NSLog (@"error in 1");
+    }];
+    [[self.command execute:@2] subscribeNext:^(id  _Nullable x) {
+        NSLog (@"get next value in 2 : %@", x);
+    } error:^(NSError * _Nullable error) {
+        NSLog (@"error in 2");
     }];
 }
 
@@ -820,7 +839,7 @@ RACSequence:RAC中的集合类，用于代替NSArray,NSDictionary,可以使用�
     
     //监听命令是否执行完毕,默认会来一次，可以直接跳过，skip表示跳过第一次信号。
     //第3种
-    [[command.executionSignals skip:1] subscribeNext:^(id  _Nullable x) {
+    [[command.executing skip:1] subscribeNext:^(id  _Nullable x) {
         if ([x boolValue] == YES) {
             // 正在执行
             NSLog(@"正在执行");
