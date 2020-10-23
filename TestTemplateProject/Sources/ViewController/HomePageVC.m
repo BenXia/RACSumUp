@@ -131,6 +131,11 @@ static const CGFloat kTableViewCellHeight = 60.0f;
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+    // 获取环境变量，控制一些功能开关
+    if (getenv("HELLO_WORLD") != NULL) {
+        NSLog (@"HELLO_WORLD: %s", getenv("HELLO_WORLD"));
+    }
+    
     self.title = @"RAC总结归纳";
     [self.navigationController setNavigationBarHidden:NO animated:animated];
 }
