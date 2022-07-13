@@ -23,12 +23,54 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+//    [self testHotSignal];
+    
     [self bindViewModel];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)testHotSignal {
+    RACSignal *coldSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        NSLog(@"Cold signal be subscribed.");
+        [[RACScheduler mainThreadScheduler] afterDelay:1.5 schedule:^{
+            [subscriber sendNext:@"A"];
+        }];
+ 
+        [[RACScheduler mainThreadScheduler] afterDelay:3 schedule:^{
+            [subscriber sendNext:@"B"];
+        }];
+ 
+        [[RACScheduler mainThreadScheduler] afterDelay:5 schedule:^{
+            [subscriber sendCompleted];
+        }];
+ 
+ 
+        return nil;
+    }];
+ 
+    RACSubject *subject = [RACSubject subject];
+    NSLog(@"Subject created.");
+ 
+    RACMulticastConnection *multicastConnection = [coldSignal multicast:subject];
+    RACSignal *hotSignal = multicastConnection.signal;
+ 
+    [[RACScheduler mainThreadScheduler] afterDelay:2 schedule:^{
+        [multicastConnection connect];
+    }];
+ 
+    [hotSignal subscribeNext:^(id x) {
+        NSLog(@"Subscribe 1 recieve value:%@.", x);
+    }];
+ 
+    [[RACScheduler mainThreadScheduler] afterDelay:4 schedule:^{
+        [hotSignal subscribeNext:^(id x) {
+            NSLog(@"Subscribe 2 recieve value:%@.", x);
+        }];
+    }];
 }
 
 - (void)bindViewModel {

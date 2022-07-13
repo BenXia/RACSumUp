@@ -55,20 +55,20 @@ static NSString *kShowABTestEntranceUDKey = @"kShowABTestEntranceUDKey";
     
     self.scrollContentViewHeightConstraint.constant = 1200;
     
-    // 1.普通情况下实现两个属性的双向绑定
-    [self simpleTwoWayBinding];
-    
-    // 2.中间需要做一些映射规则的双向绑定
-    [self customMapTwoWayBinding];
+//    // 1.普通情况下实现两个属性的双向绑定
+//    [self simpleTwoWayBinding];
+//
+//    // 2.中间需要做一些映射规则的双向绑定
+//    [self customMapTwoWayBinding];
     
     // 3.实现UISwitch跟随NSUserDefaults存储的值双向绑定
     [self switchDemoTwoWayBinding];
     
-    // 4.UITextField的text与自定义属性双向绑定
-    [self textFieldDemoTwoWayBinding];
-    
-    // 5.UITextView的text与自定义属性双向绑定
-    [self textViewDemoTwoWayBinding];
+//    // 4.UITextField的text与自定义属性双向绑定
+//    [self textFieldDemoTwoWayBinding];
+//
+//    // 5.UITextView的text与自定义属性双向绑定
+//    [self textViewDemoTwoWayBinding];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -148,25 +148,30 @@ static NSString *kShowABTestEntranceUDKey = @"kShowABTestEntranceUDKey";
     NSLog (@"=======switchDemoTwoWayBinding=======");
     
     // 第一种实现方法：
-    [[RACKVOChannel alloc] initWithTarget:[NSUserDefaults standardUserDefaults]
-                                  keyPath:kShowABTestEntranceUDKey nilValue:@(NO)][@"followingTerminal"] = [[RACKVOChannel alloc] initWithTarget:self.showABTestEntranceSwitch keyPath:@"on" nilValue:@(NO)][@"followingTerminal"];
-    @weakify(self)
-    [self.showABTestEntranceSwitch.rac_newOnChannel subscribeNext:^(NSNumber *onValue) {
-        @strongify(self)
-        
-        // 下面两句都可以
-        [self.showABTestEntranceSwitch setValue:onValue forKey:@"on"];
-        //[[NSUserDefaults standardUserDefaults] setObject:onValue forKey:kShowABTestEntranceUDKey];
-        
-        NSLog (@"=======didClickSwitchControl=======");
-        NSLog (@"self.showABTestEntranceSwitch.on: %d NSUserDefaults value: %@", self.showABTestEntranceSwitch.on, [[NSUserDefaults standardUserDefaults] objectForKey:kShowABTestEntranceUDKey]);
-    }];
+//    [[RACKVOChannel alloc] initWithTarget:[NSUserDefaults standardUserDefaults]
+//                                  keyPath:kShowABTestEntranceUDKey nilValue:@(NO)][@"followingTerminal"] = [[RACKVOChannel alloc] initWithTarget:self.showABTestEntranceSwitch keyPath:@"on" nilValue:@(NO)][@"followingTerminal"];
+//    @weakify(self)
+//    [self.showABTestEntranceSwitch.rac_newOnChannel subscribeNext:^(NSNumber *onValue) {
+//        @strongify(self)
+//
+//        // 下面两句都可以
+//        [self.showABTestEntranceSwitch setValue:onValue forKey:@"on"];
+//        //[[NSUserDefaults standardUserDefaults] setObject:onValue forKey:kShowABTestEntranceUDKey];
+//
+//        NSLog (@"=======didClickSwitchControl=======");
+//        NSLog (@"self.showABTestEntranceSwitch.on: %d NSUserDefaults value: %@", self.showABTestEntranceSwitch.on, [[NSUserDefaults standardUserDefaults] objectForKey:kShowABTestEntranceUDKey]);
+//    }];
 
      // 第二种实现方法：
-//    RACChannelTerminal *switchTerminal = self.showABTestEntranceSwitch.rac_newOnChannel;
-//    RACChannelTerminal *defaultsTerminal = [[NSUserDefaults standardUserDefaults] customChannelTerminalForKey:kShowABTestEntranceUDKey];
-//    [switchTerminal subscribe:defaultsTerminal];
-//    [defaultsTerminal subscribe:switchTerminal];
+    RACChannelTerminal *switchTerminal = self.showABTestEntranceSwitch.rac_newOnChannel;
+    // 使用rac_channelTerminalForKey:时发现点击一次 UISwitch 后，再用代码修改 NSUserDefaults 中对应值，结果 UISwitch 没有变化。
+    // 经过调试发现原因是因为当操作 UISwitch 控件时，触发 defaultsTerminal，但是 RAC 的 NSUserDefaults+RACSupport的rac_channelTerminalForKey 实现中filter操作会过滤，
+    // 导致后面的distinctUntilChanged 操作中的 __block 变量 lastValue 没有更新，这样下次再修改 NSUserDefaults 中的相应值时， distinctUntilChanged 对比的已经是上上次的
+    // lastValue，导致 defaultsTerminal 没有触发，从而没有触发 switchTerminal，从而导致双向绑定失败。
+    //RACChannelTerminal *defaultsTerminal = [[NSUserDefaults standardUserDefaults] rac_channelTerminalForKey:kShowABTestEntranceUDKey];
+    RACChannelTerminal *defaultsTerminal = [[NSUserDefaults standardUserDefaults] customChannelTerminalForKey:kShowABTestEntranceUDKey];
+    [switchTerminal subscribe:defaultsTerminal];
+    [defaultsTerminal subscribe:switchTerminal];
     
     NSLog (@"self.showABTestEntranceSwitch.on: %d NSUserDefaults value: %@", self.showABTestEntranceSwitch.on, [[NSUserDefaults standardUserDefaults] objectForKey:kShowABTestEntranceUDKey]);
     
