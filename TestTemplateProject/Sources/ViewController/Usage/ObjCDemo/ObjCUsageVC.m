@@ -67,7 +67,7 @@
         self.btn.enabled = (str1.length > 0 && str2.length > 0);
     }];
     
-    [self test6];
+    [self test6];  // test1 ~ test23
 }
 
 - (void)initData {
@@ -1108,7 +1108,7 @@ RACSequence:RAC中的集合类，用于代替NSArray,NSDictionary,可以使用�
         return nil;
     }];
     
-    // 把两个信号组合成一个信号,跟zip一样，没什么区别
+    // 把两个信号组合成一个信号,第一次必须组合的信号都有值，之后其中某个信号有新值，都会再触发事件
     RACSignal *combineSignal = [signalA combineLatestWith:signalB];
     
     [combineSignal subscribeNext:^(RACTuple *x) {

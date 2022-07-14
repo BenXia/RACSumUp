@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self racMemoryLeakTestSample1];
+//    [self racMemoryLeakTestSample1];
     
     [self racMemoryLeakTestSample2];
 }
@@ -31,9 +31,9 @@
         [subscriber sendCompleted];
         return nil;
     }];
-    //@weakify(self);
+//    @weakify(self);
     self.flattenMapSignal = [signal flattenMap:^RACSignal *(LocationModel *model) {
-        //@strongify(self);
+//        @strongify(self);
         return RACObserve(model, address);
     }];
     [self.flattenMapSignal subscribeNext:^(id x) {
@@ -58,7 +58,7 @@
     //    帖子上说 subscriber 中 nextBlock 持有 singals 和当前signal（即 subject），并且当前 signal（即 subject 持有了subsciber），所有出现了环引用
     //    但是看了最新的源码，发现已经没有了 signals 的局部变量，并且 subscriber 中的 nextBlock 不持有当前 signal（即 subject），所以只是  当前 signal（即subject持有了 subscriber），所以没有了环引用
     
-    //    // (2).换成下面的 RACSignal 则不会内存泄漏
+    //    // (2).换成下面的 RACSignal 也不会内存泄漏
     //    // subscriber 中 nextBlock 持有 singals 和 signal，并且其中 singals 持有 signal，没有环引用
     //    RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
     //        [subscriber sendNext:@1];

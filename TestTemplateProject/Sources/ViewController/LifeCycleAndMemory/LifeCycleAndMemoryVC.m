@@ -67,7 +67,7 @@
     
     [coldSignal setName:@"Cold signal for test"];
     
-    // 不要使用该私有方法，此处只是为了演示在冷信号被订阅时，里面的匿名 subscriber 如果被 dispoase，整个订阅关系的 RACDisposable对象也会 dispose
+    // 不要使用该私有方法，此处只是为了演示在冷信号被订阅时，里面的匿名 subscriber 如果被 dispose，整个订阅关系的 RACDisposable 对象也会 dispose
     RACSubscriber *subscriber = [RACSubscriber subscriberWithNext:^(id x) {
         NSLog (@"subscribeNext: %@", x);
     } error:NULL completed:NULL];
