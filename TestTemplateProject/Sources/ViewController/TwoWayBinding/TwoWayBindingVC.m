@@ -56,13 +56,13 @@ static NSString *kShowABTestEntranceUDKey = @"kShowABTestEntranceUDKey";
     self.scrollContentViewHeightConstraint.constant = 1200;
     
 //    // 1.普通情况下实现两个属性的双向绑定
-//    [self simpleTwoWayBinding];
+    [self simpleTwoWayBinding];
 //
 //    // 2.中间需要做一些映射规则的双向绑定
 //    [self customMapTwoWayBinding];
     
     // 3.实现UISwitch跟随NSUserDefaults存储的值双向绑定
-    [self switchDemoTwoWayBinding];
+//    [self switchDemoTwoWayBinding];
     
 //    // 4.UITextField的text与自定义属性双向绑定
 //    [self textFieldDemoTwoWayBinding];
@@ -85,23 +85,23 @@ static NSString *kShowABTestEntranceUDKey = @"kShowABTestEntranceUDKey";
     RACChannelTo(self, viewTextValue) = RACChannelTo(self, modelTextValue);
     
     self.viewTextValue = @"123";
-    NSLog (@"self.viewTextValue: %@ self.modelTextValue: %@", self.viewTextValue, self.modelTextValue);
-    
-    self.modelTextValue = @"abc";
-    NSLog (@"self.viewTextValue: %@ self.modelTextValue: %@", self.viewTextValue, self.modelTextValue);
-    
-    NSLog (@"\n\n\n");
-    
-    // 与方法一完全等价
-    [[RACKVOChannel alloc] initWithTarget:self keyPath:@"viewBoolValue" nilValue:nil][@"followingTerminal"] = [[RACKVOChannel alloc] initWithTarget:self keyPath:@"modelBoolValue" nilValue:nil][@"followingTerminal"];
-    
-    self.viewBoolValue = YES;
-    NSLog (@"self.viewBoolValue: %d self.modelBoolValue: %d", self.viewBoolValue, self.modelBoolValue);
-    
-    self.modelBoolValue = NO;
-    NSLog (@"self.viewBoolValue: %d self.modelBoolValue: %d", self.viewBoolValue, self.modelBoolValue);
-    
-    NSLog (@"\n\n\n\n");
+//    NSLog (@"self.viewTextValue: %@ self.modelTextValue: %@", self.viewTextValue, self.modelTextValue);
+//
+//    self.modelTextValue = @"abc";
+//    NSLog (@"self.viewTextValue: %@ self.modelTextValue: %@", self.viewTextValue, self.modelTextValue);
+//
+//    NSLog (@"\n\n\n");
+//
+//    // 与方法一完全等价
+//    [[RACKVOChannel alloc] initWithTarget:self keyPath:@"viewBoolValue" nilValue:nil][@"followingTerminal"] = [[RACKVOChannel alloc] initWithTarget:self keyPath:@"modelBoolValue" nilValue:nil][@"followingTerminal"];
+//
+//    self.viewBoolValue = YES;
+//    NSLog (@"self.viewBoolValue: %d self.modelBoolValue: %d", self.viewBoolValue, self.modelBoolValue);
+//
+//    self.modelBoolValue = NO;
+//    NSLog (@"self.viewBoolValue: %d self.modelBoolValue: %d", self.viewBoolValue, self.modelBoolValue);
+//
+//    NSLog (@"\n\n\n\n");
 }
 
 #pragma mark - 中间需要做一些映射规则的双向绑定
