@@ -19,7 +19,9 @@ fileprivate let edgeW = 10
         
         initUIRelated()
         
-        compareColdAndHotSignal()
+        bindViewModel()
+        
+//        compareColdAndHotSignal()
     }
     
     fileprivate lazy var textFieldNum : UITextField = {
@@ -135,14 +137,14 @@ extension SwiftUsageVC {
 //            print("button clicked")
 //        }
         
-        btn.reactive.controlEvents(UIControl.Event.touchUpInside).observeResult({ (result) in
-            switch result {
-            case .success(_):
-                print("button clicked")
-            case .failure:
-                print("Error")
-            }
-        })
+//        btn.reactive.controlEvents(UIControl.Event.touchUpInside).observeResult({ (result) in
+//            switch result {
+//            case .success(_):
+//                print("button clicked")
+//            case .failure:
+//                print("Error")
+//            }
+//        })
         
         // 5. 组合信号
         // 5.1 冷信号
@@ -158,44 +160,44 @@ extension SwiftUsageVC {
         btn.reactive.isEnabled <~ Signal.combineLatest(signalA, signalB).map({ (accountValid : Bool , pwdValid : Bool) -> Bool in
             return accountValid && pwdValid
         })
-        
+       
         // 5.2 热信号
-        let (signalX, observerA) = Signal<String, Never>.pipe()
-        let (signalY, observerB) = Signal<String, Never>.pipe()
-        Signal.combineLatest(signalX, signalY).observeValues { (value) in
-            print( "收到的值\(value.0) + \(value.1)")
-        }
-        observerA.send(value: "1")
-        //注意:如果加这个就是，发了一次信号就不能再发了
-        observerA.sendCompleted()
-        observerB.send(value: "2")
-        observerB.sendCompleted()
+//        let (signalX, observerA) = Signal<String, Never>.pipe()
+//        let (signalY, observerB) = Signal<String, Never>.pipe()
+//        Signal.combineLatest(signalX, signalY).observeValues { (value) in
+//            print( "收到的值\(value.0) + \(value.1)")
+//        }
+//        observerA.send(value: "1")
+//        //注意:如果加这个就是，发了一次信号就不能再发了
+//        observerA.sendCompleted()
+//        observerB.send(value: "2")
+//        observerB.sendCompleted()
         
         
         // 6. KVO VS MutableProperty
-        btn.reactive.producer(forKeyPath: "isEnabled").start({ value in
-            print(value)
-        })
-
-        let racValue = MutableProperty<Int>(1)
-        racValue.producer.startWithValues { (make) in
-            print(make)
-        }
-        racValue.value = 10
+//        btn.reactive.producer(forKeyPath: "isEnabled").start({ value in
+//            print(value)
+//        })
+//
+//        let racValue = MutableProperty<Int>(1)
+//        racValue.producer.startWithValues { (make) in
+//            print(make)
+//        }
+//        racValue.value = 10
         
         // 7.通知
-        NotificationCenter.default.reactive.notifications(forName: Notification.Name("reloadData"), object: nil).observeValues { (value) in
-            
-        }
+//        NotificationCenter.default.reactive.notifications(forName: Notification.Name("reloadData"), object: nil).observeValues { (value) in
+//            
+//        }
         
         // 8. 方法调用拦截
-        self.reactive.trigger(for: #selector(UIViewController.viewWillAppear(_:))).observeValues { () in
-            print("viewWillAppear 被调用了")
-        }
+//        self.reactive.trigger(for: #selector(UIViewController.viewWillAppear(_:))).observeValues { () in
+//            print("viewWillAppear 被调用了")
+//        }
         
         // 9. 监听对象的生命周期
-//        loginBtn.reactive.controlEvents(.touchUpInside).observeValues{ [weak self] (btn) in
-//            let usageVC = UsageVC()
+//        btn.reactive.controlEvents(.touchUpInside).observeValues{ [weak self] (btn) in
+//            let usageVC = SwiftUsageVC()
 //
 //            usageVC.reactive.lifetime.ended.observeCompleted {
 //                print("usageVC 被销毁")
@@ -208,11 +210,11 @@ extension SwiftUsageVC {
 //        contentView.signalTap.observeValues { (value) in
 //            print("点击了view")
 //        }
-//
-////        //使用闭包回调
-////        contentView.taps = {
-////
-////        }
+
+        //使用闭包回调
+//        contentView.taps = {
+//            print("taps view")
+//        }
         
         // 11. 创建自定义的信号
 //        let signal = self.createSignInSignal()
@@ -220,21 +222,29 @@ extension SwiftUsageVC {
 //        signal.observeResult { (result) in
 //            switch result {
 //            case .success(let object):
-//                print("\(object as Bool)")
+//                print("\(object as Bool) 111")
 //            case .failure:
-//                print("Error")
+//                print("Error 111")
+//            }
+//        }
+//        
+//        signal.observeResult { (result) in
+//            switch result {
+//            case .success(let object):
+//                print("\(object as Bool) 222")
+//            case .failure:
+//                print("Error 222")
 //            }
 //        }
         
-        
         // 12.延时加载
-        QueueScheduler.main.schedule(after: Date(timeIntervalSinceNow: 1.0)){
-            print("主线程调用")
-        }
-        
-        QueueScheduler.init().schedule(after: Date.init(timeIntervalSinceNow: 0.3)){
-            print("子线程调用")
-        }
+//        QueueScheduler.main.schedule(after: Date(timeIntervalSinceNow: 1.0)){
+//            print("主线程调用")
+//        }
+//       
+//        QueueScheduler.init().schedule(after: Date.init(timeIntervalSinceNow: 0.3)){
+//            print("子线程调用")
+//        }
         
         // 13. 迭代器
         // 数组的迭代器
@@ -266,6 +276,7 @@ extension SwiftUsageVC {
         let (signInSignal, observer) = Signal<Bool, Never>.pipe()
         
         DispatchQueue.main.asyncAfter(deadline:DispatchTime.now()+0.5) {
+            print("observer send value")
             observer.send(value: true)
             observer.sendCompleted()
         }

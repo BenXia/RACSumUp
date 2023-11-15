@@ -67,7 +67,9 @@
         self.btn.enabled = (str1.length > 0 && str2.length > 0);
     }];
     
-    [self test6];  // test1 ~ test23
+    //[self test6];  // test1 ~ test23
+    
+    [self testWithReduce];
 }
 
 - (void)initData {
@@ -455,7 +457,7 @@ RACSequence:RAC中的集合类，用于代替NSArray,NSDictionary,可以使用�
         }];
     }];
     
-    //command.allowsConcurrentExecution = YES;
+//    command.allowsConcurrentExecution = YES;
     
     // 强引用命令，不要被销毁，否则接收不到数据
     _command = command;
@@ -607,19 +609,21 @@ RACSequence:RAC中的集合类，用于代替NSArray,NSDictionary,可以使用�
 //过滤
 - (void)test14 {
     //1.filter:过滤信号，使用它可以获取满足条件的信号
-    [self.textField_num.rac_textSignal filter:^BOOL(NSString * _Nullable value) {
+    [[self.textField_num.rac_textSignal filter:^BOOL(NSString * _Nullable value) {
         return value.length > 3;
+    }] subscribeNext:^(NSString * _Nullable x) {
+        NSLog(@"get next: %@", x);
     }];
     
     //2.ignore:忽略完某些值的信号
     [[self.textField_num.rac_textSignal ignore:@"1"] subscribeNext:^(NSString * _Nullable x) {
-        
+        NSLog(@"get next: %@", x);
     }];
-    
+  
     //3.distinctUntilChanged:当上一次的值和当前的值有明显的变化就会发出信号，否则会被忽略掉
     //使用场合:在开发中，刷新UI经常使用，只有两次数据不一样才需要刷新
     [[self.textField_num.rac_textSignal distinctUntilChanged] subscribeNext:^(NSString * _Nullable x) {
-        
+        NSLog(@"get next: %@", x);
     }];
 }
 
@@ -672,9 +676,6 @@ RACSequence:RAC中的集合类，用于代替NSArray,NSDictionary,可以使用�
     
     //3.switchToLatest
     RACSubject *signalOfSignals = [RACSubject subject];
-    RACSubject *signal = [RACSubject subject];
-    [signalOfSignals sendNext:signal];
-    [signal sendNext:@1];
     
     // 获取信号中信号最近发出信号，订阅最近发出的信号。
     // 注意switchToLatest：只能用于信号中的信号
@@ -682,9 +683,21 @@ RACSequence:RAC中的集合类，用于代替NSArray,NSDictionary,可以使用�
         NSLog(@"%@", x);
     }];
     
+    RACSubject *signal = [RACSubject subject];
+    [signalOfSignals sendNext:signal];
+    [signal sendNext:@1];
+    
     [[signalOfSignals skip:1] subscribeNext:^(id  _Nullable x) {
-        
+        NSLog(@"x is %@", x);
     }];
+    
+    RACSubject *signal2 = [RACSubject subject];
+    [signalOfSignals sendNext:signal2];
+    [signal2 sendNext:@2];
+    
+    RACSubject *signal3 = [RACSubject subject];
+    [signalOfSignals sendNext:signal3];
+    [signal3 sendNext:@3];
 }
 
 //秩序
@@ -981,7 +994,7 @@ RACSequence:RAC中的集合类，用于代替NSArray,NSDictionary,可以使用�
 }
 
 //组合(concat),必须前面的信号发送完成了，后面信号才能收到
-- (void)concat {
+- (void)testWithConcat {
     RACSignal *signalA = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         [subscriber sendNext:@1];
         
@@ -1018,9 +1031,9 @@ RACSequence:RAC中的集合类，用于代替NSArray,NSDictionary,可以使用�
 }
 
 // merge:把多个信号合并成一个信号
-- (void)testWithCombine {
+- (void)testWithMerge {
     // merge:把多个信号合并成一个信号
-    //创建多个信号
+    // 创建多个信号
     // 底层实现：
     // 1.合并信号被订阅的时候，就会遍历所有信号，并且发出这些信号。
     // 2.每发出一个信号，这个信号就会被订阅
@@ -1068,7 +1081,7 @@ RACSequence:RAC中的集合类，用于代替NSArray,NSDictionary,可以使用�
 }
 
 //zipWith:把两个信号压缩成一个信号，只有当两个信号同时发出信号内容时，并且把两个信号的内容合并成一个元组，才会触发压缩流的next事件
-- (void)zip {
+- (void)testWithZip {
     RACSignal *signalA = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         [subscriber sendNext:@1];
         
@@ -1095,15 +1108,23 @@ RACSequence:RAC中的集合类，用于代替NSArray,NSDictionary,可以使用�
 }
 
 //combineLatest:将多个信号合并起来，并且拿到各个信号的最新的值,必须每个合并的signal至少都有过一次sendNext，才会触发合并的信号
-- (void)combineLatestWith {
+- (void)testCombineLatestWith {
     RACSignal *signalA = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         [subscriber sendNext:@1];
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [subscriber sendNext:@3];
+        });
         
         return nil;
     }];
     
     RACSignal *signalB = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         [subscriber sendNext:@2];
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(6 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [subscriber sendNext:@4];
+        });
         
         return nil;
     }];
@@ -1112,7 +1133,7 @@ RACSequence:RAC中的集合类，用于代替NSArray,NSDictionary,可以使用�
     RACSignal *combineSignal = [signalA combineLatestWith:signalB];
     
     [combineSignal subscribeNext:^(RACTuple *x) {
-        NSLog(@"%@ count = %ld",x,x.count);
+        NSLog(@"%@ count = %ld", x, x.count);
     }];
     
     // 底层实现：
@@ -1121,7 +1142,7 @@ RACSequence:RAC中的集合类，用于代替NSArray,NSDictionary,可以使用�
 }
 
 //聚合
-- (void)reduce {
+- (void)testWithReduce {
     RACSignal *signalA = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         [subscriber sendNext:@1];
         
@@ -1152,5 +1173,7 @@ RACSequence:RAC中的集合类，用于代替NSArray,NSDictionary,可以使用�
 }
 
 @end
+
+
 
 

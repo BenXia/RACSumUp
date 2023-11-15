@@ -12,7 +12,12 @@ static NSMutableString *prefixStr;
 
 @implementation UIView (Helper)
 
-+ (void)initialize
+//+ (void)initialize
+//{
+//    prefixStr = [NSMutableString stringWithFormat:@""];
+//}
+
++ (void)load
 {
     prefixStr = [NSMutableString stringWithFormat:@""];
 }

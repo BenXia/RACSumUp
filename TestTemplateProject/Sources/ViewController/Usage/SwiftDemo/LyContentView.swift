@@ -13,11 +13,11 @@ import ReactiveSwift
 class LyContentView: UIView {
     let (signalTap, observerTap) = Signal<Any, Never>.pipe()
     
-//    typealias tapBlock = ()->()
-//    
-//    var taps : tapBlock = {
-//        
-//    }
+    typealias tapBlock = ()->()
+    
+    var taps : tapBlock = {
+        
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -42,7 +42,7 @@ extension LyContentView {
     @objc fileprivate func tapClick(_ tap : UITapGestureRecognizer) {
         observerTap.send(value: tap)
         
-//        taps()
+        taps()
     }
 }
 
