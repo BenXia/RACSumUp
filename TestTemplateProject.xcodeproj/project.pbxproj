@@ -13,11 +13,8 @@
 		330F7C0D1ED349AB0009280A /* UIView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 330F7C0B1ED349AB0009280A /* UIView+Helper.m */; };
 		33144EF61EF05059006D27AC /* UIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 33144EEA1EF05059006D27AC /* UIUtils.m */; };
 		33144EF91EF05218006D27AC /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 33144EF81EF05218006D27AC /* NSString+Size.m */; };
-		3319AE9D22EDB24A001722B6 /* TwoWayBinding.png in Resources */ = {isa = PBXBuildFile; fileRef = 3319AE9B22EDB249001722B6 /* TwoWayBinding.png */; };
-		3319AE9E22EDB24A001722B6 /* RACChannelTo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3319AE9C22EDB24A001722B6 /* RACChannelTo.jpeg */; };
 		331B4D3122ED82C600BE1A47 /* RACMLKVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 331B4D2F22ED82C600BE1A47 /* RACMLKVC.m */; };
 		331B4D3222ED82C600BE1A47 /* RACMLKVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 331B4D3022ED82C600BE1A47 /* RACMLKVC.xib */; };
-		33379AF32896647600F11A34 /* TwoWayBinding2.png in Resources */ = {isa = PBXBuildFile; fileRef = 33379AF22896647500F11A34 /* TwoWayBinding2.png */; };
 		33454B321F764DB900DC3F14 /* LifeCycleAndMemoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33454B301F764DB900DC3F14 /* LifeCycleAndMemoryVC.m */; };
 		33454B331F764DB900DC3F14 /* LifeCycleAndMemoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33454B311F764DB900DC3F14 /* LifeCycleAndMemoryVC.xib */; };
 		33454B441F764EFD00DC3F14 /* TwoWayBindingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33454B421F764EFD00DC3F14 /* TwoWayBindingVC.m */; };
@@ -28,6 +25,8 @@
 		33454B511F76501D00DC3F14 /* GroupOperationsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33454B4F1F76501D00DC3F14 /* GroupOperationsVC.xib */; };
 		33454B571F76517400DC3F14 /* NSUserDefaults+CustomRACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 33454B561F76517400DC3F14 /* NSUserDefaults+CustomRACSupport.m */; };
 		337EEC291EDC3F2C00EDC166 /* NSObject+DLIntrospection.m in Sources */ = {isa = PBXBuildFile; fileRef = 337EEC281EDC3F2C00EDC166 /* NSObject+DLIntrospection.m */; };
+		3396EF052B04A9B8001FA3E8 /* RACChannel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3396EF032B04A9B8001FA3E8 /* RACChannel.jpg */; };
+		3396EF062B04A9B8001FA3E8 /* TwoWayBinding.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3396EF042B04A9B8001FA3E8 /* TwoWayBinding.jpg */; };
 		6ABC08104B7ECC2017FFB126 /* Pods_TestTemplateProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6111390E963A1B8E71ADAAC5 /* Pods_TestTemplateProject.framework */; };
 		B50394D81EEE71E00016FA97 /* HomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B50394D61EEE71E00016FA97 /* HomePageVC.m */; };
 		B50394D91EEE71E00016FA97 /* HomePageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B50394D71EEE71E00016FA97 /* HomePageVC.xib */; };
@@ -90,12 +89,9 @@
 		33144EEB1EF05059006D27AC /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		33144EF71EF05218006D27AC /* NSString+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
 		33144EF81EF05218006D27AC /* NSString+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
-		3319AE9B22EDB249001722B6 /* TwoWayBinding.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwoWayBinding.png; sourceTree = "<group>"; };
-		3319AE9C22EDB24A001722B6 /* RACChannelTo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RACChannelTo.jpeg; sourceTree = "<group>"; };
 		331B4D2E22ED82C600BE1A47 /* RACMLKVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACMLKVC.h; sourceTree = "<group>"; };
 		331B4D2F22ED82C600BE1A47 /* RACMLKVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACMLKVC.m; sourceTree = "<group>"; };
 		331B4D3022ED82C600BE1A47 /* RACMLKVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RACMLKVC.xib; sourceTree = "<group>"; };
-		33379AF22896647500F11A34 /* TwoWayBinding2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwoWayBinding2.png; sourceTree = "<group>"; };
 		33454B2F1F764DB900DC3F14 /* LifeCycleAndMemoryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LifeCycleAndMemoryVC.h; sourceTree = "<group>"; };
 		33454B301F764DB900DC3F14 /* LifeCycleAndMemoryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LifeCycleAndMemoryVC.m; sourceTree = "<group>"; };
 		33454B311F764DB900DC3F14 /* LifeCycleAndMemoryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LifeCycleAndMemoryVC.xib; sourceTree = "<group>"; };
@@ -112,6 +108,8 @@
 		33454B561F76517400DC3F14 /* NSUserDefaults+CustomRACSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+CustomRACSupport.m"; sourceTree = "<group>"; };
 		337EEC271EDC3F2C00EDC166 /* NSObject+DLIntrospection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DLIntrospection.h"; sourceTree = "<group>"; };
 		337EEC281EDC3F2C00EDC166 /* NSObject+DLIntrospection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DLIntrospection.m"; sourceTree = "<group>"; };
+		3396EF032B04A9B8001FA3E8 /* RACChannel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RACChannel.jpg; sourceTree = "<group>"; };
+		3396EF042B04A9B8001FA3E8 /* TwoWayBinding.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TwoWayBinding.jpg; sourceTree = "<group>"; };
 		3EBF4711FA3970AC76C3C06F /* Pods-TestTemplateProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTemplateProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestTemplateProject/Pods-TestTemplateProject.release.xcconfig"; sourceTree = "<group>"; };
 		6111390E963A1B8E71ADAAC5 /* Pods_TestTemplateProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestTemplateProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B50394D51EEE71E00016FA97 /* HomePageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageVC.h; sourceTree = "<group>"; };
@@ -382,12 +380,11 @@
 		33454B401F764EE700DC3F14 /* TwoWayBinding */ = {
 			isa = PBXGroup;
 			children = (
+				3396EF032B04A9B8001FA3E8 /* RACChannel.jpg */,
+				3396EF042B04A9B8001FA3E8 /* TwoWayBinding.jpg */,
 				33454B411F764EFD00DC3F14 /* TwoWayBindingVC.h */,
 				33454B421F764EFD00DC3F14 /* TwoWayBindingVC.m */,
 				33454B431F764EFD00DC3F14 /* TwoWayBindingVC.xib */,
-				3319AE9C22EDB24A001722B6 /* RACChannelTo.jpeg */,
-				3319AE9B22EDB249001722B6 /* TwoWayBinding.png */,
-				33379AF22896647500F11A34 /* TwoWayBinding2.png */,
 			);
 			path = TwoWayBinding;
 			sourceTree = "<group>";
@@ -699,14 +696,13 @@
 				33454B511F76501D00DC3F14 /* GroupOperationsVC.xib in Resources */,
 				B50394D91EEE71E00016FA97 /* HomePageVC.xib in Resources */,
 				33454B451F764EFD00DC3F14 /* TwoWayBindingVC.xib in Resources */,
+				3396EF052B04A9B8001FA3E8 /* RACChannel.jpg in Resources */,
 				B50394DF1EEE71FB0016FA97 /* PlaygroundVC.xib in Resources */,
 				330F7C021ED334380009280A /* Assets.xcassets in Resources */,
 				33454B4C1F76501000DC3F14 /* SingleOperationsVC.xib in Resources */,
 				33454B331F764DB900DC3F14 /* LifeCycleAndMemoryVC.xib in Resources */,
-				3319AE9D22EDB24A001722B6 /* TwoWayBinding.png in Resources */,
+				3396EF062B04A9B8001FA3E8 /* TwoWayBinding.jpg in Resources */,
 				331B4D3222ED82C600BE1A47 /* RACMLKVC.xib in Resources */,
-				3319AE9E22EDB24A001722B6 /* RACChannelTo.jpeg in Resources */,
-				33379AF32896647600F11A34 /* TwoWayBinding2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
